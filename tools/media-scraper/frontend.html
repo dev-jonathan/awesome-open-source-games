@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Games Curation</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #0f172a;
+        color: #f1f5f9;
+        margin: 0;
+        padding: 2rem;
+        padding-bottom: 120px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #334155;
+        padding-bottom: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .header h1 { margin: 0; font-size: 1.5rem; }
+
+      /* ─── Status Bar ──────────────────────────────────────── */
+      .status-bar {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .stat-group { display: flex; flex-direction: column; align-items: center; min-width: 80px; }
+      .stat-value { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+      .stat-label { font-size: 0.72rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+      .stat-total   { color: #f8fafc; }
+      .stat-done    { color: #22c55e; }
+      .stat-pending { color: #f59e0b; }
+      .stat-pct     { color: #60a5fa; }
+      .progress-wrap { flex: 1; min-width: 180px; }
+      .progress-track { height: 10px; background: #334155; border-radius: 99px; overflow: hidden; }
+      .progress-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #22c55e, #16a34a); transition: width 0.5s ease; }
+      .progress-label { font-size: 0.72rem; color: #64748b; margin-top: 4px; }
+
+      /* ─── Breakdown Panel ─────────────────────────────────── */
+      .breakdown-panel {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+      .breakdown-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        cursor: pointer;
+        user-select: none;
+        border-bottom: 1px solid transparent;
+        transition: background 0.2s;
+      }
+      .breakdown-header:hover { background: #253147; }
+      .breakdown-header.open { border-bottom-color: #334155; }
+      .breakdown-header h3 { margin: 0; font-size: 0.95rem; color: #94a3b8; font-weight: 600; }
+      .breakdown-toggle { font-size: 0.8rem; color: #64748b; }
+      .breakdown-body { display: none; padding: 1rem 1.25rem; }
+      .breakdown-body.open { display: block; }
+      .breakdown-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+      .cat-block { background: #0f172a; border-radius: 8px; padding: 0.75rem 1rem; border: 1px solid #1e3a5f; }
+      .cat-block h4 { margin: 0 0 0.5rem 0; font-size: 0.85rem; color: #60a5fa; display: flex; justify-content: space-between; align-items: center; }
+      .cat-count { background: #1e3a5f; padding: 1px 7px; border-radius: 99px; font-size: 0.75rem; color: #93c5fd; }
+      .sub-row { display: flex; justify-content: space-between; font-size: 0.78rem; color: #64748b; padding: 2px 0; border-bottom: 1px solid #1e293b; }
+      .sub-row:last-child { border-bottom: none; }
+      .sub-row .sub-name { color: #94a3b8; }
+      .sub-count-chip { background: #1e293b; border-radius: 4px; padding: 0 5px; font-size: 0.72rem; color: #64748b; }
+
+      /* ─── Filter Controls ─────────────────────────────────── */
+      .controls-bar {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 0.9rem 1.25rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .controls-bar label { font-size: 0.82rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 0.25rem; }
+      .filter-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; flex: 1; }
+      .chip {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 0.78rem;
+        color: #94a3b8;
+        cursor: pointer;
+        transition: all 0.15s;
+        user-select: none;
+      }
+      .chip:hover { border-color: #ef4444; color: #fca5a5; }
+      .chip.active { background: rgba(239,68,68,0.12); border-color: #ef4444; color: #fca5a5; }
+      .chip .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: #334155; transition: background 0.15s; }
+      .chip.active .chip-dot { background: #ef4444; }
+
+      .toggle-btn {
+        display: flex; align-items: center; gap: 8px;
+        background: #0f172a; border: 1px solid #334155; border-radius: 8px;
+        padding: 6px 14px; color: #94a3b8; cursor: pointer; font-size: 0.82rem;
+        transition: all 0.2s; user-select: none; white-space: nowrap;
+      }
+      .toggle-btn:hover { border-color: #f59e0b; color: #f59e0b; }
+      .toggle-btn.active { background: rgba(245,158,11,0.1); border-color: #f59e0b; color: #f59e0b; }
+      .toggle-dot { width: 12px; height: 12px; border-radius: 50%; background: #334155; border: 2px solid #475569; transition: all 0.15s; flex-shrink: 0; }
+      .toggle-btn.active .toggle-dot { background: #f59e0b; border-color: #f59e0b; }
+
+      /* ─── Game sections ───────────────────────────────────── */
+      .game-section {
+        background: #1e293b;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        border-left: 4px solid #475569;
+      }
+      .game-section.is-reviewed { border-left-color: #22c55e; }
+      .section-title { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+      .game-section h2 {
+        margin: 0 0 0.5rem 0; font-size: 1.2rem;
+        display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      }
+      .search-btn {
+        background: #1f2937; color: #cbd5e1; text-decoration: none;
+        padding: 5px 12px; border-radius: 6px; font-size: 0.8rem;
+        border: 1px solid #334155; display: inline-flex; align-items: center; cursor: pointer;
+      }
+      .search-btn:hover { background: #334155; color: white; }
+      .upload-btn { border-color: #3b82f6; color: #3b82f6; }
+      .upload-btn:hover { background: #3b82f6; color: white; }
+      .delete-btn { border-color: #ef4444; color: #ef4444; }
+      .delete-btn:hover { background: #ef4444; color: white; }
+      .badge { background: #334155; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; font-weight: normal; }
+      .cat-badge { background: #1e3a5f; color: #60a5fa; font-size: 0.7rem; padding: 2px 7px; border-radius: 10px; font-weight: 500; }
+      .reviewed-badge {
+        background: rgba(34,197,94,0.15); color: #22c55e;
+        border: 1px solid rgba(34,197,94,0.3); font-size: 0.7rem;
+        padding: 2px 8px; border-radius: 12px; font-weight: bold; text-transform: uppercase;
+      }
+      .none-badge {
+        background: #ef4444; color: white; font-size: 0.75rem;
+        padding: 2px 8px; border-radius: 12px; font-weight: bold; text-transform: uppercase;
+      }
+      .game-section p { font-size: 0.9rem; color: #94a3b8; margin-bottom: 1.5rem; }
+      .image-grid { display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 1rem; }
+
+      .card {
+        flex: 0 0 auto; width: 280px; background: #0f172a; border-radius: 8px;
+        overflow: hidden; cursor: crosshair; border: 3px solid transparent;
+        transition: all 0.2s; position: relative;
+      }
+      .card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5); }
+      .card.selected { border-color: #22c55e; }
+      .card.selected::after {
+        content: attr(data-order); display: flex; align-items: center; justify-content: center;
+        position: absolute; top: 10px; right: 10px; background: #22c55e; color: white;
+        width: 26px; height: 26px; border-radius: 50%; font-size: 0.9rem; font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .card img { width: 100%; height: 160px; object-fit: cover; display: block; border-bottom: 1px solid #334155; }
+      .label { padding: 10px; text-align: center; font-size: 0.85rem; font-weight: bold; color: #cbd5e1; pointer-events: none; }
+      .dim-badge {
+        position: absolute; bottom: 42px; right: 5px; padding: 2px 6px; border-radius: 4px;
+        font-size: 0.7rem; font-weight: bold; color: white; opacity: 0.9;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.5); pointer-events: none;
+      }
+      .bg-red    { background-color: #ef4444; }
+      .bg-yellow { background-color: #eab308; }
+      .bg-green  { background-color: #22c55e; }
+
+      .modal {
+        display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.8); backdrop-filter: blur(4px);
+      }
+      .modal-content {
+        background-color: #1e293b; margin: 10% auto; padding: 30px; border-radius: 12px;
+        width: 50%; max-width: 600px; color: white; position: relative;
+        border: 1px solid #475569; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      }
+      .close-btn { position: absolute; top: 20px; right: 20px; background: none; border: none; color: #94a3b8; font-size: 1.5rem; cursor: pointer; }
+      .drop-zone {
+        border: 3px dashed #475569; border-radius: 12px; padding: 60px 40px;
+        text-align: center; margin-top: 20px; color: #94a3b8; transition: all 0.3s; font-size: 1.1rem;
+      }
+      .drop-zone.dragover { border-color: #3b82f6; background-color: rgba(59,130,246,0.1); color: #3b82f6; }
+      .loading-overlay {
+        display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(15,23,42,0.9); border-radius: 12px;
+        align-items: center; justify-content: center; flex-direction: column; z-index: 10;
+      }
+      .spinner {
+        border: 4px solid rgba(255,255,255,0.1); width: 40px; height: 40px; border-radius: 50%;
+        border-left-color: #22c55e; animation: spin 1s linear infinite; margin-bottom: 15px;
+      }
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+      .floating-save-btn {
+        position: fixed; bottom: 30px; right: 30px; background: #22c55e; color: white;
+        padding: 15px 30px; border-radius: 50px; font-weight: bold; font-size: 1.1rem;
+        box-shadow: 0 10px 25px -5px rgba(34,197,94,0.5); cursor: pointer; z-index: 50;
+        transition: transform 0.2s, background 0.2s; border: 2px solid white;
+        display: flex; align-items: center; gap: 10px;
+      }
+      .floating-save-btn:hover { transform: scale(1.05); background: #16a34a; }
+      #loader-init { text-align: center; padding: 100px; color: #eab308; font-size: 1.5rem; }
+
+      /* ─── Save Log Panel ──────────────────────────────────────── */
+      #save-log-panel {
+        position: fixed; bottom: 100px; right: 30px; width: 360px;
+        background: #0f172a; border: 1px solid #334155; border-radius: 12px;
+        font-size: 0.78rem; font-family: 'Courier New', monospace;
+        z-index: 49; overflow: hidden;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.6);
+        transition: opacity 0.3s, transform 0.3s;
+        opacity: 0; transform: translateY(8px); pointer-events: none;
+      }
+      #save-log-panel.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+      .log-header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 8px 12px; background: #1e293b; border-bottom: 1px solid #334155;
+        font-size: 0.72rem; color: #64748b;
+      }
+      .log-header strong { color: #f1f5f9; font-size: 0.8rem; }
+      .log-clear { cursor: pointer; color: #475569; font-size: 0.7rem; }
+      .log-clear:hover { color: #94a3b8; }
+      #save-log-entries { max-height: 260px; overflow-y: auto; padding: 6px 0; }
+      .log-entry { padding: 6px 12px; border-bottom: 1px solid #1e293b; }
+      .log-entry:last-child { border-bottom: none; }
+      .log-ts { color: #475569; font-size: 0.68rem; display: block; margin-bottom: 3px; }
+      .log-summary { color: #22c55e; font-weight: bold; }
+      .log-detail { margin: 2px 0; color: #94a3b8; }
+      .log-detail.added    { color: #34d399; }
+      .log-detail.modified { color: #fbbf24; }
+      .log-detail.removed  { color: #f87171; }
+      .log-detail.nochange { color: #475569; }
+      .log-ids { display: block; margin-left: 16px; color: #64748b; word-break: break-all; line-height: 1.4; }
+
+      /* delete confirm toast */
+      .confirm-overlay {
+        display: none; position: absolute; inset: 0; background: rgba(15,23,42,0.92);
+        border-radius: 12px; z-index: 20; align-items: center; justify-content: center;
+        flex-direction: column; gap: 1rem; text-align: center; padding: 2rem;
+      }
+      .confirm-overlay.show { display: flex; }
+      .confirm-overlay p { margin: 0; color: #fca5a5; font-weight: 600; font-size: 1rem; }
+      .confirm-row { display: flex; gap: 1rem; }
+      .btn-confirm { background: #ef4444; color: white; border: none; border-radius: 8px; padding: 8px 20px; font-weight: bold; cursor: pointer; }
+      .btn-cancel  { background: #334155; color: #cbd5e1; border: none; border-radius: 8px; padding: 8px 20px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>🎮 Curation Dashboard</h1>
+      <p style="color: #94a3b8; margin: 0">Source: <code style="color:#60a5fa">website/src/data/games.json</code> → review-server → /api/db</p>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar" id="status-bar" style="display:none;">
+      <div class="stat-group">
+        <span class="stat-value stat-total" id="stat-total">—</span>
+        <span class="stat-label">Visible</span>
+      </div>
+      <div class="stat-group">
+        <span class="stat-value stat-done" id="stat-done">—</span>
+        <span class="stat-label">Reviewed</span>
+      </div>
+      <div class="stat-group">
+        <span class="stat-value stat-pending" id="stat-pending">—</span>
+        <span class="stat-label">Pending</span>
+      </div>
+      <div class="stat-group">
+        <span class="stat-value stat-pct" id="stat-pct">—</span>
+        <span class="stat-label">Complete</span>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <div class="progress-label" id="progress-label">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Breakdown Panel -->
+    <div class="breakdown-panel" id="breakdown-panel" style="display:none;">
+      <div class="breakdown-header" id="breakdown-toggle" onclick="toggleBreakdown()">
+        <h3>📊 Data Breakdown — All categories &amp; subcategories</h3>
+        <span class="breakdown-toggle" id="breakdown-arrow">▼ expand</span>
+      </div>
+      <div class="breakdown-body" id="breakdown-body"></div>
+    </div>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar" id="controls-bar" style="display:none;">
+      <label>Hide categories:</label>
+      <div class="filter-chips" id="filter-chips"></div>
+      <div class="toggle-btn active" id="filter-toggle" onclick="toggleUnreviewedFilter()">
+        <div class="toggle-dot"></div>
+        <span id="filter-toggle-label">Show Reviewed</span>
+      </div>
+    </div>
+
+    <div id="loader-init">
+      Loading Database from API...
+      <div class="spinner" style="margin: 20px auto"></div>
+    </div>
+
+    <div id="content-container"></div>
+
+    <div class="floating-save-btn" onclick="triggerManualSecureSave()" id="secure-save-btn">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+        <polyline points="7 3 7 8 15 8"></polyline>
+      </svg>
+      SAVE (CTRL+S)
+    </div>
+
+    <!-- Save Log Panel -->
+    <div id="save-log-panel">
+      <div class="log-header">
+        <strong>💾 Save Log</strong>
+        <span class="log-clear" onclick="clearSaveLog()">✕ clear</span>
+      </div>
+      <div id="save-log-entries"></div>
+    </div>
+
+    <div id="upload-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeUploadModal()">✕</button>
+        <h2 style="margin-top:0">Upload Image</h2>
+        <p style="color:#94a3b8">Insert custom image for <strong id="modal-game-name" style="color:white"></strong></p>
+        <div id="drop-zone" class="drop-zone"><br/>Drag &amp; Drop your image here,<br/>or press <strong>Ctrl+V</strong> to paste.</div>
+        <div id="loading-overlay" class="loading-overlay">
+          <div class="spinner"></div>
+          <h3 style="margin:0;color:#22c55e">Processing...</h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ─── Categories to hide by default (non-game content) ────
+      const SKIP_CATEGORIES_DEFAULT = [
+        'Major Companies',
+        'Frameworks/Engines/Libraries',
+        'Maps/Hacks/Plugins/Utilities/All of the Things™',
+        'Just The Source',
+        'Chat bots'
+      ];
+
+      let dbCache = null;
+      let hiddenCategories = new Set(SKIP_CATEGORIES_DEFAULT);
+      let filterOnlyUnreviewed = true;  // default: hide already-reviewed games
+      let breakdownOpen = false;
+
+      document.addEventListener('keydown', e => {
+        if (e.ctrlKey && e.key === 's') { e.preventDefault(); triggerManualSecureSave(); }
+      });
+
+      // ─── Boot ────────────────────────────────────────────────
+      async function boot() {
+        try {
+          const req = await fetch('/api/db');
+          dbCache = await req.json();
+          document.getElementById('loader-init').style.display = 'none';
+          buildFilterChips();
+          buildBreakdown();
+          renderAll(dbCache);
+          updateStatusBar();
+          document.getElementById('status-bar').style.display = 'flex';
+          document.getElementById('breakdown-panel').style.display = '';
+          document.getElementById('controls-bar').style.display = 'flex';
+        } catch(e) {
+          document.getElementById('loader-init').innerHTML = 'Fatal Error Loading API.';
+        }
+      }
+
+      // ─── Filter chips ─────────────────────────────────────────
+      function buildFilterChips() {
+        const allCats = [...new Set(dbCache.games.map(g => g.category))].sort();
+        const container = document.getElementById('filter-chips');
+        container.innerHTML = '';
+        allCats.forEach(cat => {
+          const chip = document.createElement('div');
+          const isActive = hiddenCategories.has(cat);
+          chip.className = 'chip' + (isActive ? ' active' : '');
+          chip.innerHTML = `<div class="chip-dot"></div>${cat}`;
+          chip.onclick = () => toggleCategoryFilter(cat, chip);
+          container.appendChild(chip);
+        });
+      }
+
+      function toggleCategoryFilter(cat, chip) {
+        if (hiddenCategories.has(cat)) {
+          hiddenCategories.delete(cat);
+          chip.classList.remove('active');
+        } else {
+          hiddenCategories.add(cat);
+          chip.classList.add('active');
+        }
+        applyFilters();
+        updateStatusBar();
+      }
+
+      function toggleUnreviewedFilter() {
+        filterOnlyUnreviewed = !filterOnlyUnreviewed;
+        const btn = document.getElementById('filter-toggle');
+        btn.classList.toggle('active', filterOnlyUnreviewed);
+        document.getElementById('filter-toggle-label').textContent =
+          filterOnlyUnreviewed ? 'Show Reviewed' : 'Hide Reviewed';
+        applyFilters();
+        updateStatusBar();
+      }
+
+      function applyFilters() {
+        document.querySelectorAll('.game-section').forEach(section => {
+          const gameId = section.id.replace('section-', '');
+          const game = dbCache.games.find(g => g.id === gameId);
+          if (!game) return;
+          const hidden =
+            hiddenCategories.has(game.category) ||
+            (filterOnlyUnreviewed && !!(dbCache.selections[gameId]));
+          section.style.display = hidden ? 'none' : '';
+        });
+        // After hiding sections the page may be too short to trigger scroll.
+        // Keep loading batches until there's enough content or data is exhausted.
+        ensureBatchesFillPage();
+      }
+
+      function ensureBatchesFillPage() {
+        if (!globalDb || currentIndex >= globalDb.games.length) return;
+        // If body is shorter than viewport, append more batches
+        const needMore = document.body.scrollHeight <= window.innerHeight + 200;
+        if (needMore) {
+          appendNextBatch();
+          // Recursively check after a tiny delay to allow DOM update
+          setTimeout(ensureBatchesFillPage, 50);
+        }
+      }
+
+      function isGameVisible(game) {
+        if (hiddenCategories.has(game.category)) return false;
+        if (filterOnlyUnreviewed && dbCache.selections[game.id]) return false;
+        return true;
+      }
+
+      // ─── Status bar ───────────────────────────────────────────
+      function updateStatusBar() {
+        if (!dbCache) return;
+        const visible = dbCache.games.filter(g => !hiddenCategories.has(g.category));
+        const total   = visible.length;
+        const done    = visible.filter(g => dbCache.selections[g.id]).length;
+        const pending = total - done;
+        const pct     = total > 0 ? Math.round((done / total) * 100) : 0;
+
+        document.getElementById('stat-total').textContent   = total;
+        document.getElementById('stat-done').textContent    = done;
+        document.getElementById('stat-pending').textContent = pending;
+        document.getElementById('stat-pct').textContent     = pct + '%';
+        document.getElementById('progress-fill').style.width = pct + '%';
+        document.getElementById('progress-label').textContent =
+          `${done} of ${total} visible games curated (${dbCache.games.length} total in db)`;
+      }
+
+      // ─── Breakdown panel ──────────────────────────────────────
+      function buildBreakdown() {
+        // Group by category → subcategory
+        const catMap = {};
+        dbCache.games.forEach(g => {
+          if (!catMap[g.category]) catMap[g.category] = { total: 0, subs: {} };
+          catMap[g.category].total++;
+          const sub = g.subcategory || '(none)';
+          if (!catMap[g.category].subs[sub]) catMap[g.category].subs[sub] = 0;
+          catMap[g.category].subs[sub]++;
+        });
+
+        const body = document.getElementById('breakdown-body');
+        let html = '<div class="breakdown-grid">';
+        Object.entries(catMap).sort((a,b) => b[1].total - a[1].total).forEach(([cat, data]) => {
+          const subsHtml = Object.entries(data.subs)
+            .sort((a,b) => b[1] - a[1])
+            .map(([sub, cnt]) => `<div class="sub-row"><span class="sub-name">${sub}</span><span class="sub-count-chip">${cnt}</span></div>`)
+            .join('');
+          html += `
+            <div class="cat-block">
+              <h4>${cat} <span class="cat-count">${data.total}</span></h4>
+              ${subsHtml}
+            </div>`;
+        });
+        html += '</div>';
+        body.innerHTML = html;
+      }
+
+      function toggleBreakdown() {
+        breakdownOpen = !breakdownOpen;
+        const header = document.getElementById('breakdown-toggle');
+        const body = document.getElementById('breakdown-body');
+        const arrow = document.getElementById('breakdown-arrow');
+        header.classList.toggle('open', breakdownOpen);
+        body.classList.toggle('open', breakdownOpen);
+        arrow.textContent = breakdownOpen ? '▲ collapse' : '▼ expand';
+      }
+
+      // ─── Rendering ────────────────────────────────────────────
+      let currentIndex = 0;
+      const PAGE_SIZE = 15;
+      let globalDb = null;
+      let imageObserver = null;
+
+      function renderAll(db) {
+        globalDb = db;
+        currentIndex = 0;
+        const container = document.getElementById('content-container');
+        container.innerHTML = '';
+
+        imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.getAttribute('data-src');
+              observer.unobserve(img);
+            }
+          });
+        }, { rootMargin: '0px 0px 800px 0px' });
+
+        appendNextBatch();
+        // If the first batch is mostly/all hidden by active filters (e.g. all
+        // games reviewed when filterOnlyUnreviewed is on by default), the body
+        // won't be tall enough to trigger the scroll listener. Pre-fill now.
+        setTimeout(ensureBatchesFillPage, 50);
+        window.addEventListener('scroll', () => {
+          if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 1500) {
+            appendNextBatch();
+          }
+        });
+      }
+
+      function appendNextBatch() {
+        if (!globalDb || currentIndex >= globalDb.games.length) return;
+        const batch = globalDb.games.slice(currentIndex, currentIndex + PAGE_SIZE);
+        currentIndex += PAGE_SIZE;
+
+        let batchHtml = '';
+        batch.forEach(game => {
+          const savedPicks = globalDb.selections[game.id] || [];
+          const isReviewed = savedPicks.length > 0;
+          const hidden = !isGameVisible(game);
+          let imagesHtml = '';
+
+          game.images.sort((a, b) => {
+            const aGit = a.file.startsWith('github_'), bGit = b.file.startsWith('github_');
+            if (aGit && !bGit) return -1; if (!aGit && bGit) return 1; return 0;
+          });
+
+          game.images.forEach(imgData => {
+            const file = imgData.file;
+            const urlPath = `/candidates/${encodeURI(game.id)}/${encodeURI(file)}`;
+            const orderIndex = savedPicks.indexOf(file);
+            const isSelected = orderIndex !== -1;
+            const orderBadgeTag = isSelected
+              ? `class="card selected" data-order="${orderIndex + 1}"`
+              : `class="card"`;
+
+            let bgClass = 'bg-red';
+            const mp = imgData.w * imgData.h;
+            if (mp >= 1000 * 600) bgClass = 'bg-green';
+            else if (mp >= 600 * 300) bgClass = 'bg-yellow';
+            const dimBadge = `<div class="dim-badge ${bgClass}">${imgData.w}x${imgData.h}</div>`;
+
+            let githubOverlay = '';
+            if (file.startsWith('github_')) {
+              githubOverlay = `<div style="position:absolute;top:10px;left:10px;background:rgba(30,41,59,0.9);border-radius:50%;padding:4px;display:flex;border:1px solid #475569;pointer-events:none;">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>`;
+            }
+
+            imagesHtml += `
+              <div ${orderBadgeTag} data-game="${game.id}" data-file="${file}"
+                   onclick="toggleWinner(this)"
+                   oncontextmenu="window.open('${imgData.srcUrl}','_blank');return false;"
+                   title="Click to Select">
+                ${githubOverlay}
+                <img data-src="${urlPath}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" class="lazy-io" onerror="this.src='';this.alt='Corrupted file';"/>
+                <div class="label">${file}</div>
+                ${dimBadge}
+              </div>`;
+          });
+
+          const noneDisplay   = savedPicks.length > 0 ? `style="display:none;"` : ``;
+          const githubHref    = game.link || '#';
+          const reviewedBadge = isReviewed ? `<span class="reviewed-badge">✓ Reviewed (${savedPicks.length})</span>` : '';
+          const sectionClass  = 'game-section' + (isReviewed ? ' is-reviewed' : '');
+          const safeName      = game.name.replace(/'/g, "\\'");
+          const subLabel      = game.subcategory ? ` › ${game.subcategory}` : '';
+
+          batchHtml += `
+            <div class="${sectionClass}" id="section-${game.id}" style="position:relative;${hidden ? 'display:none;' : ''}">
+              <div class="section-title">
+                <h2>
+                  ${game.name}
+                  <span class="badge">${game.images.length} imgs</span>
+                  <span class="cat-badge">${game.category}${subLabel}</span>
+                  <span class="none-badge" id="none-${game.id}" ${noneDisplay}>None</span>
+                  ${reviewedBadge}
+                </h2>
+                <div style="display:flex;gap:6px;flex-shrink:0;">
+                  <a href="javascript:void(0)" onclick="openUploadModal('${game.id}','${safeName}')" class="search-btn upload-btn">➕ Upload</a>
+                  <a href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent('open source game ' + game.name)}" target="_blank" class="search-btn">🔍 Google</a>
+                  <a href="${githubHref}" target="_blank" class="search-btn">GitHub</a>
+                  <a href="javascript:void(0)" onclick="confirmDeleteImages('${game.id}')" class="search-btn delete-btn">🗑 Delete All</a>
+                </div>
+              </div>
+              <p>${game.description}</p>
+              <div class="image-grid">${imagesHtml}</div>
+              <div class="confirm-overlay" id="confirm-${game.id}">
+                <p>⚠ Delete all ${game.images.length} images for <strong>${game.name}</strong>?<br><small style="color:#94a3b8;font-weight:normal">This also removes it from your curated selections.</small></p>
+                <div class="confirm-row">
+                  <button class="btn-confirm" onclick="doDeleteImages('${game.id}')">Yes, delete</button>
+                  <button class="btn-cancel" onclick="cancelDelete('${game.id}')">Cancel</button>
+                </div>
+              </div>
+            </div>`;
+        });
+
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = batchHtml;
+        wrapper.querySelectorAll('.lazy-io').forEach(img => imageObserver.observe(img));
+        const container = document.getElementById('content-container');
+        while (wrapper.firstChild) container.appendChild(wrapper.firstChild);
+      }
+
+      // ─── Delete images ────────────────────────────────────────
+      function confirmDeleteImages(gameId) {
+        document.getElementById('confirm-' + gameId).classList.add('show');
+      }
+      function cancelDelete(gameId) {
+        document.getElementById('confirm-' + gameId).classList.remove('show');
+      }
+      async function doDeleteImages(gameId) {
+        cancelDelete(gameId);
+        try {
+          const res = await fetch('/delete-images', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ gameId })
+          });
+          const data = await res.json();
+          if (data.success) {
+            // Remove section from DOM
+            const section = document.getElementById('section-' + gameId);
+            if (section) section.remove();
+            // Update local cache
+            if (dbCache.selections[gameId]) {
+              delete dbCache.selections[gameId];
+              updateStatusBar();
+            }
+            // Remove from globalDb.games images list too
+            const gIdx = globalDb.games.findIndex(g => g.id === gameId);
+            if (gIdx !== -1) globalDb.games[gIdx].images = [];
+            console.log(`[DELETE] Removed ${data.deleted} images for ${gameId}`);
+          }
+        } catch(e) { alert('Delete failed: ' + e.message); }
+      }
+
+      // ─── Save ─────────────────────────────────────────────────
+      let lastSaveSnapshot = null; // tracks what was on disk at last successful save
+
+      function collectSelections() {
+        const selections = {};
+        document.querySelectorAll('.game-section').forEach(section => {
+          const gameId = section.id.replace('section-', '');
+          const cards = Array.from(section.querySelectorAll('.card.selected'));
+          if (cards.length > 0) {
+            cards.sort((a, b) => parseInt(a.getAttribute('data-order')) - parseInt(b.getAttribute('data-order')));
+            selections[gameId] = cards.map(c => c.getAttribute('data-file'));
+          }
+        });
+        return selections;
+      }
+
+      function renderSaveLog(diff, savedCount, timestamp) {
+        const panel = document.getElementById('save-log-panel');
+        const entries = document.getElementById('save-log-entries');
+        const { added, modified, removed } = diff;
+        const ts = new Date(timestamp).toLocaleTimeString();
+
+        let html = `<div class="log-entry">`;
+        html += `<span class="log-ts">${ts}</span>`;
+        html += `<div class="log-summary">✓ ${savedCount} total saved to disk</div>`;
+
+        if (!added.length && !modified.length && !removed.length) {
+          html += `<div class="log-detail nochange">= No changes from previous save</div>`;
+        }
+        if (added.length) {
+          html += `<div class="log-detail added">+ ${added.length} new</div>`;
+          html += `<span class="log-ids">${added.join('<br>')}</span>`;
+        }
+        if (modified.length) {
+          html += `<div class="log-detail modified">~ ${modified.length} modified</div>`;
+          html += `<span class="log-ids">${modified.join('<br>')}</span>`;
+        }
+        if (removed.length) {
+          html += `<div class="log-detail removed">- ${removed.length} removed</div>`;
+          html += `<span class="log-ids">${removed.join('<br>')}</span>`;
+        }
+        html += `</div>`;
+
+        entries.insertAdjacentHTML('afterbegin', html);
+        panel.classList.add('visible');
+      }
+
+      function clearSaveLog() {
+        document.getElementById('save-log-entries').innerHTML = '';
+        document.getElementById('save-log-panel').classList.remove('visible');
+      }
+
+      function triggerManualSecureSave() {
+        const btn = document.getElementById('secure-save-btn');
+        btn.style.background = '#0ea5e9';
+        btn.innerHTML = '<div class="spinner" style="width:18px;height:18px;margin:0;border-width:2px;"></div> SAVING...';
+
+        const selections = collectSelections();
+        // MERGE into dbCache.selections — never replace wholesale.
+        // dbCache.selections may contain reviewed games that haven't been scrolled
+        // into the DOM yet; wiping it would make them appear as unreviewed on
+        // subsequent infinite-scroll batches.
+        if (dbCache) Object.assign(dbCache.selections, selections);
+
+        fetch('/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(selections)
+        })
+        .then(res => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.json();
+        })
+        .then(data => {
+          if (!data.success) throw new Error(data.error || 'Unknown server error');
+
+          lastSaveSnapshot = JSON.parse(JSON.stringify(selections));
+          updateStatusBar();
+          renderSaveLog(data.diff, data.savedCount, Date.now());
+
+          btn.style.background = '#22c55e';
+          const total = data.diff.added.length + data.diff.modified.length;
+          btn.innerHTML = total > 0
+            ? `✓ +${total} SAVED (CTRL+S)`
+            : `✓ SAVED (CTRL+S)`;
+
+          setTimeout(() => {
+            btn.style.background = '#22c55e';
+            btn.innerHTML = '💾 SAVE (CTRL+S)';
+          }, 4000);
+        })
+        .catch(err => {
+          btn.style.background = '#ef4444';
+          btn.innerHTML = '✗ SAVE FAILED — RETRY!';
+          setTimeout(() => {
+            btn.style.background = '#22c55e';
+            btn.innerHTML = '💾 SAVE (CTRL+S)';
+          }, 5000);
+          // Log the error in the panel too
+          const entries = document.getElementById('save-log-entries');
+          const ts = new Date().toLocaleTimeString();
+          entries.insertAdjacentHTML('afterbegin',
+            `<div class="log-entry"><span class="log-ts">${ts}</span><div class="log-detail removed">✗ SAVE FAILED: ${err.message}</div></div>`);
+          document.getElementById('save-log-panel').classList.add('visible');
+        });
+      }
+
+      // ⚠ DO NOT auto-save on beforeunload.
+      // With infinite-scroll, the DOM only contains rendered batches.
+      // Saving from DOM during unload would write a partial list and wipe the rest.
+      // Instead: just warn the user if they have unsaved DOM selections.
+      let _hasUnsavedChanges = false;
+      document.addEventListener('click', e => {
+        if (e.target.closest && e.target.closest('.card')) _hasUnsavedChanges = true;
+      });
+      window.addEventListener('beforeunload', e => {
+        if (_hasUnsavedChanges) {
+          e.preventDefault();
+          e.returnValue = 'You have unsaved curation changes. Save first (CTRL+S)!';
+        }
+      });
+      // Reset flag after a successful save
+      const _origRenderSaveLog = renderSaveLog;
+      renderSaveLog = function(...args) { _hasUnsavedChanges = false; _origRenderSaveLog(...args); };
+
+
+      // ─── Card selection ───────────────────────────────────────
+      function toggleWinner(element) {
+        const parent = element.parentElement;
+        if (element.classList.contains('selected')) {
+          element.classList.remove('selected'); element.removeAttribute('data-order');
+        } else {
+          let maxOrder = 0;
+          parent.querySelectorAll('.card.selected').forEach(c => {
+            const ord = parseInt(c.getAttribute('data-order') || '0');
+            if (ord > maxOrder) maxOrder = ord;
+          });
+          element.classList.add('selected'); element.setAttribute('data-order', (maxOrder + 1).toString());
+        }
+        const selectedCards = Array.from(parent.querySelectorAll('.card.selected'))
+          .sort((a, b) => parseInt(a.getAttribute('data-order')) - parseInt(b.getAttribute('data-order')));
+        selectedCards.forEach((c, i) => c.setAttribute('data-order', (i + 1).toString()));
+
+        const section = element.closest('.game-section');
+        section.querySelector('.none-badge').style.display = selectedCards.length === 0 ? 'inline-block' : 'none';
+
+        let reviewedBadge = section.querySelector('.reviewed-badge');
+        if (selectedCards.length > 0) {
+          section.classList.add('is-reviewed');
+          if (!reviewedBadge) {
+            reviewedBadge = document.createElement('span');
+            reviewedBadge.className = 'reviewed-badge';
+            section.querySelector('h2').appendChild(reviewedBadge);
+          }
+          reviewedBadge.textContent = `✓ Reviewed (${selectedCards.length})`;
+        } else {
+          section.classList.remove('is-reviewed');
+          if (reviewedBadge) reviewedBadge.remove();
+        }
+      }
+
+      // ─── Upload modal ─────────────────────────────────────────
+      let currentUploadGameId = null;
+      function openUploadModal(gameId, gameName) {
+        currentUploadGameId = gameId;
+        document.getElementById('modal-game-name').innerText = gameName;
+        document.getElementById('upload-modal').style.display = 'block';
+        document.getElementById('loading-overlay').style.display = 'none';
+      }
+      function closeUploadModal() {
+        document.getElementById('upload-modal').style.display = 'none';
+        currentUploadGameId = null;
+      }
+
+      window.addEventListener('paste', e => {
+        if (!currentUploadGameId) return;
+        for (let i = 0; i < e.clipboardData.items.length; i++) {
+          if (e.clipboardData.items[i].type.indexOf('image') !== -1) {
+            return handleFile(e.clipboardData.items[i].getAsFile());
+          }
+        }
+      });
+
+      const dropZone = document.getElementById('drop-zone');
+      dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+      dropZone.addEventListener('dragleave', e => { e.preventDefault(); dropZone.classList.remove('dragover'); });
+      dropZone.addEventListener('drop', e => {
+        e.preventDefault(); dropZone.classList.remove('dragover');
+        if (currentUploadGameId && e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+      });
+
+      function handleFile(file) {
+        if (!file.type.startsWith('image/')) return alert('Must be a valid image file!');
+        document.getElementById('loading-overlay').style.display = 'flex';
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          fetch('/upload', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ gameId: currentUploadGameId, base64: e.target.result }) })
+            .then(res => res.json()).then(data => {
+              if (data.success) {
+                const section = document.getElementById('section-' + currentUploadGameId);
+                if (section) {
+                  const urlPath = `/candidates/${encodeURI(currentUploadGameId)}/${encodeURI(data.fileName)}`;
+                  section.querySelector('.image-grid').insertAdjacentHTML('afterbegin', `
+                    <div class="card" data-game="${currentUploadGameId}" data-file="${data.fileName}" onclick="toggleWinner(this)" title="Uploaded Custom">
+                      <img src="${urlPath}" class="lazy-io loaded"/>
+                      <div class="label">${data.fileName}</div>
+                      <div class="dim-badge bg-green">CUSTOM</div>
+                    </div>`);
+                }
+                closeUploadModal();
+              } else {
+                alert('Error: ' + data.error);
+                document.getElementById('loading-overlay').style.display = 'none';
+              }
+            });
+        };
+        reader.readAsDataURL(file);
+      }
+
+      boot();
+    </script>
+  </body>
+</html>
