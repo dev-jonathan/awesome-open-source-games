@@ -1,0 +1,4012 @@
+{
+  "2048": {
+    "lastFetched": 1778611493160,
+    "stats": {
+      "stars": 13248,
+      "commits": 10,
+      "lastPush": "2024-10-24T13:06:19Z",
+      "relevanceScore": 8.72
+    },
+    "language": "JavaScript"
+  },
+  "chessmata": {
+    "lastFetched": 1778611414224,
+    "stats": {
+      "stars": 12,
+      "commits": 201,
+      "lastPush": "2026-03-16T18:44:41Z",
+      "relevanceScore": 6.36
+    },
+    "language": "TypeScript"
+  },
+  "wolfcha": {
+    "lastFetched": 1778611416390,
+    "stats": {
+      "stars": 594,
+      "commits": 777,
+      "lastPush": "2026-05-06T09:37:04Z",
+      "relevanceScore": 11.28
+    },
+    "language": "TypeScript"
+  },
+  "duckhunt-javascript": {
+    "lastFetched": 1778611439529,
+    "stats": {
+      "stars": 622,
+      "commits": 141,
+      "lastPush": "2026-05-09T17:40:38Z",
+      "relevanceScore": 10.14
+    },
+    "language": "JavaScript"
+  },
+  "pappu-pakia": {
+    "lastFetched": 1778611454833,
+    "stats": {
+      "stars": 38,
+      "commits": 31,
+      "lastPush": "2022-06-28T08:19:20Z",
+      "relevanceScore": 1.55
+    },
+    "language": "JavaScript"
+  },
+  "sandboxels": {
+    "lastFetched": 1778611492277,
+    "stats": {
+      "stars": 394,
+      "commits": 334,
+      "lastPush": "2026-02-26T18:24:30Z",
+      "relevanceScore": 10.27
+    },
+    "language": "JavaScript"
+  },
+  "ending": {
+    "lastFetched": 1778611505784,
+    "stats": {
+      "stars": 125,
+      "commits": 65,
+      "lastPush": "2013-07-28T11:36:05Z",
+      "relevanceScore": 0.5
+    },
+    "language": "ActionScript"
+  },
+  "red-eclipse": {
+    "lastFetched": 1778611574678,
+    "stats": {
+      "stars": 514,
+      "commits": 655,
+      "lastPush": "2026-04-08T03:49:01Z",
+      "relevanceScore": 11.01
+    },
+    "language": "C++"
+  },
+  "warsow": {
+    "lastFetched": 1778611577701,
+    "stats": {
+      "stars": 78,
+      "commits": 1126,
+      "lastPush": "2026-04-26T17:25:15Z",
+      "relevanceScore": 9.44
+    },
+    "language": "C++"
+  },
+  "xonotic": {
+    "lastFetched": 1778611578674,
+    "stats": {
+      "stars": 494,
+      "commits": 2748,
+      "lastPush": "2026-05-11T12:01:57Z",
+      "relevanceScore": 11.97
+    },
+    "language": "Java"
+  },
+  "open-ko": {
+    "lastFetched": 1778611579614,
+    "stats": {
+      "stars": 338,
+      "commits": 3351,
+      "lastPush": "2026-05-11T08:06:41Z",
+      "relevanceScore": 11.71
+    },
+    "language": "C++"
+  },
+  "veloren": {
+    "lastFetched": 1778611582430,
+    "stats": {
+      "stars": 7266,
+      "commits": 11960,
+      "lastPush": "2026-05-10T16:25:10Z",
+      "relevanceScore": 15.79
+    },
+    "language": "Rust"
+  },
+  "shattered-pixel-dungeon": {
+    "lastFetched": 1778611593754,
+    "stats": {
+      "stars": 6093,
+      "commits": 1865,
+      "lastPush": "2026-03-23T15:22:47Z",
+      "relevanceScore": 14.32
+    },
+    "language": "Java"
+  },
+  "legend-of-elya": {
+    "lastFetched": 1778611597328,
+    "stats": {
+      "stars": 70,
+      "commits": 232,
+      "lastPush": "2026-04-02T15:30:57Z",
+      "relevanceScore": 8.23
+    },
+    "language": "C"
+  },
+  "beyond-all-reason-bar": {
+    "lastFetched": 1778611642833,
+    "stats": {
+      "stars": 3914,
+      "commits": 43266,
+      "lastPush": "2026-05-11T12:31:07Z",
+      "relevanceScore": 16.04
+    },
+    "language": "Lua"
+  },
+  "unknown-horizons": {
+    "lastFetched": 1778611674955,
+    "stats": {
+      "stars": 1512,
+      "commits": 5020,
+      "lastPush": "2026-04-14T19:25:01Z",
+      "relevanceScore": 13.55
+    },
+    "language": "Python"
+  },
+  "zapzap": {
+    "lastFetched": 1778611691027,
+    "stats": {
+      "stars": 0,
+      "commits": 62,
+      "lastPush": "2026-05-01T19:02:26Z",
+      "relevanceScore": 2.87
+    },
+    "language": "TypeScript"
+  },
+  "babylon-js": {
+    "lastFetched": 1778611721456,
+    "stats": {
+      "stars": 25484,
+      "commits": 14376,
+      "lastPush": "2026-05-12T14:45:21Z",
+      "relevanceScore": 17.23
+    },
+    "language": "TypeScript"
+  },
+  "easeljavascript": {
+    "lastFetched": 1778611734529,
+    "stats": {
+      "stars": 8168,
+      "commits": 1794,
+      "lastPush": "2026-01-24T17:25:05Z",
+      "relevanceScore": 14.6
+    },
+    "language": "JavaScript"
+  },
+  "melonjavascript": {
+    "lastFetched": 1778611755797,
+    "stats": {
+      "stars": 6285,
+      "commits": 1224,
+      "lastPush": "2026-05-12T09:26:39Z",
+      "relevanceScore": 14.06
+    },
+    "language": "JavaScript"
+  },
+  "physicsjavascript": {
+    "lastFetched": 1778611764633,
+    "stats": {
+      "stars": 3699,
+      "commits": 50,
+      "lastPush": "2019-03-26T23:43:28Z",
+      "relevanceScore": 0.7
+    },
+    "language": "JavaScript"
+  },
+  "3d-hartwing-chess-set": {
+    "lastFetched": 1778611409712,
+    "stats": {
+      "stars": 536,
+      "commits": 96,
+      "lastPush": "2023-03-31T20:40:37Z",
+      "relevanceScore": 2.43
+    },
+    "language": "JavaScript"
+  },
+  "c4": {
+    "lastFetched": 1778611410647,
+    "stats": {
+      "stars": 277,
+      "commits": 104,
+      "lastPush": "2026-05-12T12:02:10Z",
+      "relevanceScore": 9.09
+    },
+    "language": "TypeScript"
+  },
+  "desperate-gods": {
+    "lastFetched": 1778611411567,
+    "stats": {
+      "stars": 324,
+      "commits": 3514,
+      "lastPush": "2018-10-25T13:49:20Z",
+      "relevanceScore": 0.73
+    },
+    "language": "C#"
+  },
+  "green-mahjong": {
+    "lastFetched": 1778611412457,
+    "stats": {
+      "stars": 101,
+      "commits": 366,
+      "lastPush": "2017-01-24T08:23:10Z",
+      "relevanceScore": 0.56
+    },
+    "language": "JavaScript"
+  },
+  "kriegspiel": {
+    "lastFetched": 1778611413347,
+    "stats": {
+      "stars": 27,
+      "commits": 10,
+      "lastPush": "2014-03-10T23:42:59Z",
+      "relevanceScore": 0.27
+    },
+    "language": "JavaScript"
+  },
+  "lichess": {
+    "lastFetched": 1778611415473,
+    "stats": {
+      "stars": 18179,
+      "commits": 6126,
+      "lastPush": "2026-05-12T18:24:04Z",
+      "relevanceScore": 16.28
+    },
+    "language": "Scala"
+  },
+  "alge-s-escapade": {
+    "lastFetched": 1778611417714,
+    "stats": {
+      "stars": 41,
+      "commits": 16,
+      "lastPush": "2021-09-29T15:05:32Z",
+      "relevanceScore": 1.22
+    },
+    "language": "JavaScript"
+  },
+  "alien-invasion": {
+    "lastFetched": 1778611418592,
+    "stats": {
+      "stars": 182,
+      "commits": 10,
+      "lastPush": "2019-10-07T20:36:03Z",
+      "relevanceScore": 0.39
+    },
+    "language": "JavaScript"
+  },
+  "arashi": {
+    "lastFetched": 1778611419530,
+    "stats": {
+      "stars": 20,
+      "commits": 10,
+      "lastPush": "2010-07-03T21:45:06Z",
+      "relevanceScore": 0.25
+    },
+    "language": "JavaScript"
+  },
+  "asteroids": {
+    "lastFetched": 1778611420411,
+    "stats": {
+      "stars": 350,
+      "commits": 10,
+      "lastPush": "2024-04-19T03:43:38Z",
+      "relevanceScore": 4.34
+    },
+    "language": "JavaScript"
+  },
+  "avabranch": {
+    "lastFetched": 1778611421349,
+    "stats": {
+      "stars": 61,
+      "commits": 187,
+      "lastPush": "2020-05-11T21:04:15Z",
+      "relevanceScore": 0.5
+    },
+    "language": "HTML"
+  },
+  "ball-and-wall": {
+    "lastFetched": 1778611422237,
+    "stats": {
+      "stars": 49,
+      "commits": 104,
+      "lastPush": "2015-03-16T19:02:00Z",
+      "relevanceScore": 0.46
+    },
+    "language": "JavaScript"
+  },
+  "breakout": {
+    "lastFetched": 1778611423194,
+    "stats": {
+      "stars": 32,
+      "commits": 85,
+      "lastPush": "2024-03-10T20:48:29Z",
+      "relevanceScore": 4.21
+    },
+    "language": "JavaScript"
+  },
+  "captain-rogers": {
+    "lastFetched": 1778611424194,
+    "stats": {
+      "stars": 52,
+      "commits": 91,
+      "lastPush": "2020-05-24T20:57:42Z",
+      "relevanceScore": 0.45
+    },
+    "language": "JavaScript"
+  },
+  "ceros-snake": {
+    "lastFetched": 1778611425095,
+    "stats": {
+      "stars": 6,
+      "commits": 24,
+      "lastPush": "2016-02-09T21:44:40Z",
+      "relevanceScore": 0.2
+    },
+    "language": "JavaScript"
+  },
+  "chang": {
+    "lastFetched": 1778611426103,
+    "stats": {
+      "stars": 47,
+      "commits": 687,
+      "lastPush": "2013-12-01T21:46:34Z",
+      "relevanceScore": 0.54
+    },
+    "language": "CoffeeScript"
+  },
+  "chromacore": {
+    "lastFetched": 1778611427044,
+    "stats": {
+      "stars": 47,
+      "commits": 485,
+      "lastPush": "2017-06-27T02:38:18Z",
+      "relevanceScore": 0.52
+    },
+    "language": "C#"
+  },
+  "jolly-jumper": {
+    "lastFetched": 1778611428466,
+    "stats": {
+      "stars": 72,
+      "commits": 141,
+      "lastPush": "2024-02-22T11:03:04Z",
+      "relevanceScore": 4.95
+    },
+    "language": "JavaScript"
+  },
+  "clumsy-bird": {
+    "lastFetched": 1778611429349,
+    "stats": {
+      "stars": 1609,
+      "commits": 45,
+      "lastPush": "2018-04-13T23:19:54Z",
+      "relevanceScore": 0.65
+    },
+    "language": "JavaScript"
+  },
+  "coffee-snake": {
+    "lastFetched": 1778611430271,
+    "stats": {
+      "stars": 33,
+      "commits": 10,
+      "lastPush": "2021-05-04T08:12:01Z",
+      "relevanceScore": 0.28
+    },
+    "language": "JavaScript"
+  },
+  "coil": {
+    "lastFetched": 1778611431143,
+    "stats": {
+      "stars": 59,
+      "commits": 10,
+      "lastPush": "2012-11-30T07:33:06Z",
+      "relevanceScore": 0.32
+    },
+    "language": "JavaScript"
+  },
+  "color-quest": {
+    "lastFetched": 1778611432171,
+    "stats": {
+      "stars": 42,
+      "commits": 714,
+      "lastPush": "2015-03-14T04:15:38Z",
+      "relevanceScore": 0.53
+    },
+    "language": "C#"
+  },
+  "core-commiter": {
+    "lastFetched": 1778611433123,
+    "stats": {
+      "stars": 16,
+      "commits": 188,
+      "lastPush": "2013-01-18T02:28:30Z",
+      "relevanceScore": 0.41
+    },
+    "language": "JavaScript"
+  },
+  "crappy-bird": {
+    "lastFetched": 1778611434017,
+    "stats": {
+      "stars": 58,
+      "commits": 10,
+      "lastPush": "2024-01-11T04:03:07Z",
+      "relevanceScore": 3.18
+    },
+    "language": "HTML"
+  },
+  "custom-tetris": {
+    "lastFetched": 1778611435016,
+    "stats": {
+      "stars": 100,
+      "commits": 10,
+      "lastPush": "2015-09-06T16:14:13Z",
+      "relevanceScore": 0.35
+    },
+    "language": "JavaScript"
+  },
+  "d3shooter": {
+    "lastFetched": 1778611435907,
+    "stats": {
+      "stars": 14,
+      "commits": 23,
+      "lastPush": "2019-10-22T23:43:30Z",
+      "relevanceScore": 0.25
+    },
+    "language": "JavaScript"
+  },
+  "digger": {
+    "lastFetched": 1778611436798,
+    "stats": {
+      "stars": 94,
+      "commits": 10,
+      "lastPush": "2024-02-12T20:52:47Z",
+      "relevanceScore": 3.49
+    },
+    "language": "HTML"
+  },
+  "drakonas": {
+    "lastFetched": 1778611437686,
+    "stats": {
+      "stars": 17,
+      "commits": 156,
+      "lastPush": "2025-05-30T07:29:54Z",
+      "relevanceScore": 6.52
+    },
+    "language": "JavaScript"
+  },
+  "drill-bunny": {
+    "lastFetched": 1778611438629,
+    "stats": {
+      "stars": 47,
+      "commits": 763,
+      "lastPush": "2014-05-01T20:31:43Z",
+      "relevanceScore": 0.54
+    },
+    "language": "JavaScript"
+  },
+  "emberwind": {
+    "lastFetched": 1778611440511,
+    "stats": {
+      "stars": 264,
+      "commits": 1802,
+      "lastPush": "2012-06-14T07:53:57Z",
+      "relevanceScore": 0.69
+    },
+    "language": "JavaScript"
+  },
+  "executiveman": {
+    "lastFetched": 1778611441395,
+    "stats": {
+      "stars": 89,
+      "commits": 2337,
+      "lastPush": "2018-01-26T02:29:05Z",
+      "relevanceScore": 0.63
+    },
+    "language": "JavaScript"
+  },
+  "fluid-table-tennis": {
+    "lastFetched": 1778611442303,
+    "stats": {
+      "stars": 82,
+      "commits": 58,
+      "lastPush": "2022-07-02T00:49:53Z",
+      "relevanceScore": 1.86
+    },
+    "language": "JavaScript"
+  },
+  "heal-em-all": {
+    "lastFetched": 1778611443361,
+    "stats": {
+      "stars": 51,
+      "commits": 84,
+      "lastPush": "2019-07-24T15:45:09Z",
+      "relevanceScore": 0.45
+    },
+    "language": "JavaScript"
+  },
+  "hotfix": {
+    "lastFetched": 1778611444321,
+    "stats": {
+      "stars": 199,
+      "commits": 734,
+      "lastPush": "2015-04-02T09:05:30Z",
+      "relevanceScore": 0.63
+    },
+    "language": "C#"
+  },
+  "hyperspace-garbage-collector": {
+    "lastFetched": 1778611445271,
+    "stats": {
+      "stars": 63,
+      "commits": 20,
+      "lastPush": "2013-12-02T04:58:49Z",
+      "relevanceScore": 0.34
+    },
+    "language": "JavaScript"
+  },
+  "i-spy-a-ghost": {
+    "lastFetched": 1778611446181,
+    "stats": {
+      "stars": 60,
+      "commits": 190,
+      "lastPush": "2016-06-08T13:18:45Z",
+      "relevanceScore": 0.5
+    },
+    "language": "JavaScript"
+  },
+  "jekyll-hyde-collide": {
+    "lastFetched": 1778611447183,
+    "stats": {
+      "stars": 31,
+      "commits": 80,
+      "lastPush": "2013-11-30T03:25:46Z",
+      "relevanceScore": 0.42
+    },
+    "language": "C#"
+  },
+  "jumpsuit": {
+    "lastFetched": 1778611448174,
+    "stats": {
+      "stars": 47,
+      "commits": 155,
+      "lastPush": "2017-12-01T18:05:09Z",
+      "relevanceScore": 0.47
+    },
+    "language": "JavaScript"
+  },
+  "mario-5-html": {
+    "lastFetched": 1778611449053,
+    "stats": {
+      "stars": 522,
+      "commits": 12,
+      "lastPush": "2022-12-06T14:57:34Z",
+      "relevanceScore": 1.85
+    },
+    "language": "JavaScript"
+  },
+  "mega-girl": {
+    "lastFetched": 1778611450140,
+    "stats": {
+      "stars": 59,
+      "commits": 598,
+      "lastPush": "2013-12-04T20:26:47Z",
+      "relevanceScore": 0.54
+    },
+    "language": "C#"
+  },
+  "masonry-javascript-tetris-clone": {
+    "lastFetched": 1778611451041,
+    "stats": {
+      "stars": 12,
+      "commits": 10,
+      "lastPush": "2015-08-13T10:24:31Z",
+      "relevanceScore": 0.22
+    },
+    "language": "JavaScript"
+  },
+  "monster-wants-candy": {
+    "lastFetched": 1778611451988,
+    "stats": {
+      "stars": 65,
+      "commits": 10,
+      "lastPush": "2015-06-16T10:20:42Z",
+      "relevanceScore": 0.33
+    },
+    "language": "JavaScript"
+  },
+  "octocat-jump": {
+    "lastFetched": 1778611452926,
+    "stats": {
+      "stars": 33,
+      "commits": 10,
+      "lastPush": "2012-11-23T12:05:05Z",
+      "relevanceScore": 0.28
+    },
+    "language": "JavaScript"
+  },
+  "onslaught-arena": {
+    "lastFetched": 1778611453877,
+    "stats": {
+      "stars": 203,
+      "commits": 436,
+      "lastPush": "2017-04-04T06:40:47Z",
+      "relevanceScore": 0.61
+    },
+    "language": "JavaScript"
+  },
+  "phaser-snake": {
+    "lastFetched": 1778611455768,
+    "stats": {
+      "stars": 5,
+      "commits": 10,
+      "lastPush": "2015-08-13T10:22:35Z",
+      "relevanceScore": 0.17
+    },
+    "language": "JavaScript"
+  },
+  "pixelplatformer": {
+    "lastFetched": 1778611456668,
+    "stats": {
+      "stars": 28,
+      "commits": 14,
+      "lastPush": "2011-12-30T15:30:20Z",
+      "relevanceScore": 0.28
+    },
+    "language": "JavaScript"
+  },
+  "polybranch": {
+    "lastFetched": 1778611457691,
+    "stats": {
+      "stars": 168,
+      "commits": 12,
+      "lastPush": "2021-09-11T15:14:20Z",
+      "relevanceScore": 1.56
+    },
+    "language": "JavaScript"
+  },
+  "protocol-390": {
+    "lastFetched": 1778611458678,
+    "stats": {
+      "stars": 21,
+      "commits": 1059,
+      "lastPush": "2015-03-04T05:42:49Z",
+      "relevanceScore": 0.5
+    },
+    "language": "JavaScript"
+  },
+  "raging-gardens": {
+    "lastFetched": 1778611460146,
+    "stats": {
+      "stars": 27,
+      "commits": 63,
+      "lastPush": "2018-11-04T12:22:07Z",
+      "relevanceScore": 0.4
+    },
+    "language": "JavaScript"
+  },
+  "release-cycles": {
+    "lastFetched": 1778611461115,
+    "stats": {
+      "stars": 75,
+      "commits": 261,
+      "lastPush": "2015-09-28T06:45:59Z",
+      "relevanceScore": 0.52
+    },
+    "language": "CoffeeScript"
+  },
+  "save-the-forest": {
+    "lastFetched": 1778611462014,
+    "stats": {
+      "stars": 19,
+      "commits": 27,
+      "lastPush": "2016-09-15T16:07:06Z",
+      "relevanceScore": 0.27
+    },
+    "language": "JavaScript"
+  },
+  "ski-free": {
+    "lastFetched": 1778611462957,
+    "stats": {
+      "stars": 549,
+      "commits": 10,
+      "lastPush": "2026-02-22T21:35:18Z",
+      "relevanceScore": 7.41
+    },
+    "language": "JavaScript"
+  },
+  "snake": {
+    "lastFetched": 1778611464040,
+    "stats": {
+      "stars": 28,
+      "commits": 10,
+      "lastPush": "2022-11-19T15:46:20Z",
+      "relevanceScore": 1.09
+    },
+    "language": "JavaScript"
+  },
+  "snake-new": {
+    "lastFetched": 1778611464976,
+    "stats": {
+      "stars": 60,
+      "commits": 10,
+      "lastPush": "2023-03-29T10:46:34Z",
+      "relevanceScore": 1.28
+    },
+    "language": null
+  },
+  "space-shooter": {
+    "lastFetched": 1778611465946,
+    "stats": {
+      "stars": 20,
+      "commits": 102,
+      "lastPush": "2024-03-10T20:47:43Z",
+      "relevanceScore": 3.99
+    },
+    "language": "JavaScript"
+  },
+  "spashal": {
+    "lastFetched": 1778611466850,
+    "stats": {
+      "stars": 8,
+      "commits": 30,
+      "lastPush": "2016-08-22T19:21:29Z",
+      "relevanceScore": 0.22
+    },
+    "language": "HTML"
+  },
+  "square-off": {
+    "lastFetched": 1778611467848,
+    "stats": {
+      "stars": 10,
+      "commits": 10,
+      "lastPush": "2023-10-20T09:48:40Z",
+      "relevanceScore": 2.08
+    },
+    "language": "JavaScript"
+  },
+  "space-crusade": {
+    "lastFetched": 1778611468737,
+    "stats": {
+      "stars": 12,
+      "commits": 10,
+      "lastPush": "2019-01-22T12:41:19Z",
+      "relevanceScore": 0.22
+    },
+    "language": "JavaScript"
+  },
+  "super-mario-bros": {
+    "lastFetched": 1778611469617,
+    "stats": {
+      "stars": 216,
+      "commits": 16,
+      "lastPush": "2016-06-01T10:41:24Z",
+      "relevanceScore": 0.41
+    },
+    "language": "JavaScript"
+  },
+  "survivor": {
+    "lastFetched": 1778611470498,
+    "stats": {
+      "stars": 128,
+      "commits": 19,
+      "lastPush": "2018-07-07T15:50:33Z",
+      "relevanceScore": 0.38
+    },
+    "language": "JavaScript"
+  },
+  "wpilot": {
+    "lastFetched": 1778611471395,
+    "stats": {
+      "stars": 165,
+      "commits": 37,
+      "lastPush": "2013-03-19T15:19:51Z",
+      "relevanceScore": 0.49
+    },
+    "language": "JavaScript"
+  },
+  "zedinvaders": {
+    "lastFetched": 1778611472294,
+    "stats": {
+      "stars": 8,
+      "commits": 35,
+      "lastPush": "2020-04-09T20:55:17Z",
+      "relevanceScore": 0.3
+    },
+    "language": "HTML"
+  },
+  "111-one-button-games": {
+    "lastFetched": 1778611473212,
+    "stats": {
+      "stars": 85,
+      "commits": 10,
+      "lastPush": "2022-08-26T08:33:58Z",
+      "relevanceScore": 1.37
+    },
+    "language": "JavaScript"
+  },
+  "backdooms": {
+    "lastFetched": 1778611474092,
+    "stats": {
+      "stars": 630,
+      "commits": 207,
+      "lastPush": "2025-04-21T08:34:33Z",
+      "relevanceScore": 8.47
+    },
+    "language": "HTML"
+  },
+  "bananabread": {
+    "lastFetched": 1778611474998,
+    "stats": {
+      "stars": 1442,
+      "commits": 4079,
+      "lastPush": "2022-05-31T16:08:05Z",
+      "relevanceScore": 3.34
+    },
+    "language": "C++"
+  },
+  "nazi-zombies-portable": {
+    "lastFetched": 1778611475958,
+    "stats": {
+      "stars": 713,
+      "commits": 10,
+      "lastPush": "2026-05-11T10:41:53Z",
+      "relevanceScore": 7.68
+    },
+    "language": "Shell"
+  },
+  "diablo-javascript": {
+    "lastFetched": 1778611476839,
+    "stats": {
+      "stars": 1000,
+      "commits": 272,
+      "lastPush": "2022-10-11T20:45:34Z",
+      "relevanceScore": 2.77
+    },
+    "language": "Java"
+  },
+  "roguish": {
+    "lastFetched": 1778611477704,
+    "stats": {
+      "stars": 99,
+      "commits": 74,
+      "lastPush": "2015-03-12T22:39:51Z",
+      "relevanceScore": 0.49
+    },
+    "language": "HTML"
+  },
+  "room-for-change": {
+    "lastFetched": 1778611478999,
+    "stats": {
+      "stars": 144,
+      "commits": 115,
+      "lastPush": "2017-04-09T17:31:56Z",
+      "relevanceScore": 0.53
+    },
+    "language": "Java"
+  },
+  "browserquest": {
+    "lastFetched": 1778611479975,
+    "stats": {
+      "stars": 9363,
+      "commits": 684,
+      "lastPush": "2023-07-14T00:56:50Z",
+      "relevanceScore": 8.79
+    },
+    "language": "JavaScript"
+  },
+  "reia": {
+    "lastFetched": 1778611480935,
+    "stats": {
+      "stars": 811,
+      "commits": 515,
+      "lastPush": "2026-05-12T11:10:33Z",
+      "relevanceScore": 11.32
+    },
+    "language": "GDScript"
+  },
+  "ancient-beast": {
+    "lastFetched": 1778611481869,
+    "stats": {
+      "stars": 1850,
+      "commits": 2632,
+      "lastPush": "2026-05-12T09:55:25Z",
+      "relevanceScore": 13.31
+    },
+    "language": "TypeScript"
+  },
+  "command-conquer": {
+    "lastFetched": 1778611482731,
+    "stats": {
+      "stars": 801,
+      "commits": 30,
+      "lastPush": "2020-10-03T08:44:10Z",
+      "relevanceScore": 0.58
+    },
+    "language": "JavaScript"
+  },
+  "freeciv-web": {
+    "lastFetched": 1778611483707,
+    "stats": {
+      "stars": 2160,
+      "commits": 5581,
+      "lastPush": "2026-03-27T00:10:21Z",
+      "relevanceScore": 14
+    },
+    "language": "JavaScript"
+  },
+  "hexa-battle": {
+    "lastFetched": 1778611484608,
+    "stats": {
+      "stars": 86,
+      "commits": 26,
+      "lastPush": "2017-06-21T13:25:32Z",
+      "relevanceScore": 0.36
+    },
+    "language": "TypeScript"
+  },
+  "rapid-dominance": {
+    "lastFetched": 1778611485742,
+    "stats": {
+      "stars": 14,
+      "commits": 23,
+      "lastPush": "2023-11-01T20:54:56Z",
+      "relevanceScore": 2.46
+    },
+    "language": "TypeScript"
+  },
+  "tower-defense": {
+    "lastFetched": 1778611486681,
+    "stats": {
+      "stars": 124,
+      "commits": 117,
+      "lastPush": "2024-08-07T07:31:44Z",
+      "relevanceScore": 6.78
+    },
+    "language": "JavaScript"
+  },
+  "hexgl": {
+    "lastFetched": 1778611487575,
+    "stats": {
+      "stars": 1714,
+      "commits": 157,
+      "lastPush": "2024-06-29T03:59:36Z",
+      "relevanceScore": 9.16
+    },
+    "language": "JavaScript"
+  },
+  "trigger-rally-online-edition": {
+    "lastFetched": 1778611488575,
+    "stats": {
+      "stars": 364,
+      "commits": 243,
+      "lastPush": "2026-01-20T16:59:35Z",
+      "relevanceScore": 9.97
+    },
+    "language": "JavaScript"
+  },
+  "3d-city": {
+    "lastFetched": 1778611489455,
+    "stats": {
+      "stars": 1703,
+      "commits": 2549,
+      "lastPush": "2026-04-16T23:19:25Z",
+      "relevanceScore": 13.21
+    },
+    "language": "JavaScript"
+  },
+  "blk-game": {
+    "lastFetched": 1778611490372,
+    "stats": {
+      "stars": 51,
+      "commits": 90,
+      "lastPush": "2013-05-07T00:59:52Z",
+      "relevanceScore": 0.45
+    },
+    "language": "JavaScript"
+  },
+  "cube-engine": {
+    "lastFetched": 1778611491308,
+    "stats": {
+      "stars": 186,
+      "commits": 10,
+      "lastPush": "2023-03-25T04:25:10Z",
+      "relevanceScore": 1.57
+    },
+    "language": "JavaScript"
+  },
+  "a-dark-room": {
+    "lastFetched": 1778611494037,
+    "stats": {
+      "stars": 51,
+      "commits": 10,
+      "lastPush": "2013-08-26T00:55:25Z",
+      "relevanceScore": 0.31
+    },
+    "language": "JavaScript"
+  },
+  "anagramica": {
+    "lastFetched": 1778611494941,
+    "stats": {
+      "stars": 13,
+      "commits": 15,
+      "lastPush": "2023-07-18T20:32:48Z",
+      "relevanceScore": 2.32
+    },
+    "language": "JavaScript"
+  },
+  "astry": {
+    "lastFetched": 1778611495844,
+    "stats": {
+      "stars": 588,
+      "commits": 11,
+      "lastPush": "2023-04-09T09:59:48Z",
+      "relevanceScore": 1.88
+    },
+    "language": "JavaScript"
+  },
+  "beatrix": {
+    "lastFetched": 1778611496760,
+    "stats": {
+      "stars": 20,
+      "commits": 10,
+      "lastPush": "2018-05-12T09:08:29Z",
+      "relevanceScore": 0.25
+    },
+    "language": "JavaScript"
+  },
+  "bitbot": {
+    "lastFetched": 1778611498328,
+    "stats": {
+      "stars": 52,
+      "commits": 694,
+      "lastPush": "2016-05-21T20:11:54Z",
+      "relevanceScore": 0.54
+    },
+    "language": "JavaScript"
+  },
+  "blicblockjavascript": {
+    "lastFetched": 1778611499183,
+    "stats": {
+      "stars": 17,
+      "commits": 42,
+      "lastPush": "2018-04-14T19:45:19Z",
+      "relevanceScore": 0.35
+    },
+    "language": "CSS"
+  },
+  "blockrain-js": {
+    "lastFetched": 1778611500157,
+    "stats": {
+      "stars": 985,
+      "commits": 12,
+      "lastPush": "2018-07-09T19:20:26Z",
+      "relevanceScore": 0.51
+    },
+    "language": "JavaScript"
+  },
+  "branching-out": {
+    "lastFetched": 1778611501116,
+    "stats": {
+      "stars": 70,
+      "commits": 333,
+      "lastPush": "2012-11-30T17:19:11Z",
+      "relevanceScore": 0.53
+    },
+    "language": null
+  },
+  "clone-man": {
+    "lastFetched": 1778611502110,
+    "stats": {
+      "stars": 21,
+      "commits": 10,
+      "lastPush": "2012-12-02T01:25:59Z",
+      "relevanceScore": 0.25
+    },
+    "language": "ActionScript"
+  },
+  "couch-2048": {
+    "lastFetched": 1778611503035,
+    "stats": {
+      "stars": 33,
+      "commits": 10,
+      "lastPush": "2016-10-08T13:50:39Z",
+      "relevanceScore": 0.28
+    },
+    "language": "JavaScript"
+  },
+  "cube-composer": {
+    "lastFetched": 1778611503928,
+    "stats": {
+      "stars": 2032,
+      "commits": 10,
+      "lastPush": "2022-12-08T09:23:40Z",
+      "relevanceScore": 2.19
+    },
+    "language": "PureScript"
+  },
+  "drunken-viking": {
+    "lastFetched": 1778611504857,
+    "stats": {
+      "stars": 62,
+      "commits": 35,
+      "lastPush": "2021-10-19T22:29:23Z",
+      "relevanceScore": 1.7
+    },
+    "language": "JavaScript"
+  },
+  "follow-me-a-simon-clone": {
+    "lastFetched": 1778611506668,
+    "stats": {
+      "stars": 12,
+      "commits": 10,
+      "lastPush": "2015-08-13T10:20:25Z",
+      "relevanceScore": 0.22
+    },
+    "language": "JavaScript"
+  },
+  "for-king": {
+    "lastFetched": 1778611507737,
+    "stats": {
+      "stars": 32,
+      "commits": 10,
+      "lastPush": "2012-12-01T00:40:40Z",
+      "relevanceScore": 0.28
+    },
+    "language": "ActionScript"
+  },
+  "genetic-drift": {
+    "lastFetched": 1778611508703,
+    "stats": {
+      "stars": 14,
+      "commits": 83,
+      "lastPush": "2012-12-01T20:32:50Z",
+      "relevanceScore": 0.37
+    },
+    "language": "JavaScript"
+  },
+  "hex-2048": {
+    "lastFetched": 1778611509656,
+    "stats": {
+      "stars": 17,
+      "commits": 10,
+      "lastPush": "2020-02-15T09:17:06Z",
+      "relevanceScore": 0.24
+    },
+    "language": "JavaScript"
+  },
+  "hexahedral": {
+    "lastFetched": 1778611510575,
+    "stats": {
+      "stars": 30,
+      "commits": 10,
+      "lastPush": "2018-05-26T06:21:16Z",
+      "relevanceScore": 0.28
+    },
+    "language": "JavaScript"
+  },
+  "hextris": {
+    "lastFetched": 1778611511589,
+    "stats": {
+      "stars": 2406,
+      "commits": 274,
+      "lastPush": "2023-05-13T16:26:15Z",
+      "relevanceScore": 7.51
+    },
+    "language": "JavaScript"
+  },
+  "infectors": {
+    "lastFetched": 1778611512492,
+    "stats": {
+      "stars": 16,
+      "commits": 49,
+      "lastPush": "2017-12-19T01:50:29Z",
+      "relevanceScore": 0.35
+    },
+    "language": "JavaScript"
+  },
+  "lost-beneath-the-surface": {
+    "lastFetched": 1778611513382,
+    "stats": {
+      "stars": 9,
+      "commits": 50,
+      "lastPush": "2015-08-13T10:27:56Z",
+      "relevanceScore": 0.32
+    },
+    "language": "JavaScript"
+  },
+  "monkey-rally": {
+    "lastFetched": 1778611514313,
+    "stats": {
+      "stars": 27,
+      "commits": 68,
+      "lastPush": "2016-05-02T17:47:33Z",
+      "relevanceScore": 0.4
+    },
+    "language": "JavaScript"
+  },
+  "orbium": {
+    "lastFetched": 1778611515245,
+    "stats": {
+      "stars": 88,
+      "commits": 170,
+      "lastPush": "2024-08-21T06:30:17Z",
+      "relevanceScore": 6.7
+    },
+    "language": "JavaScript"
+  },
+  "parity": {
+    "lastFetched": 1778611516173,
+    "stats": {
+      "stars": 46,
+      "commits": 10,
+      "lastPush": "2018-10-04T11:00:54Z",
+      "relevanceScore": 0.3
+    },
+    "language": "JavaScript"
+  },
+  "pond": {
+    "lastFetched": 1778611517063,
+    "stats": {
+      "stars": 57,
+      "commits": 256,
+      "lastPush": "2019-07-01T13:05:05Z",
+      "relevanceScore": 0.51
+    },
+    "language": "JavaScript"
+  },
+  "pop-pop-win": {
+    "lastFetched": 1778611518602,
+    "stats": {
+      "stars": 154,
+      "commits": 997,
+      "lastPush": "2026-04-01T05:51:52Z",
+      "relevanceScore": 10.05
+    },
+    "language": "Dart"
+  },
+  "prism": {
+    "lastFetched": 1778611519488,
+    "stats": {
+      "stars": 28,
+      "commits": 15,
+      "lastPush": "2015-03-27T22:11:45Z",
+      "relevanceScore": 0.28
+    },
+    "language": "JavaScript"
+  },
+  "push-and-fork": {
+    "lastFetched": 1778611520715,
+    "stats": {
+      "stars": 39,
+      "commits": 134,
+      "lastPush": "2025-08-24T04:43:48Z",
+      "relevanceScore": 7.25
+    },
+    "language": "JavaScript"
+  },
+  "shape-experiment": {
+    "lastFetched": 1778611521607,
+    "stats": {
+      "stars": 9,
+      "commits": 10,
+      "lastPush": "2017-10-29T16:26:50Z",
+      "relevanceScore": 0.2
+    },
+    "language": "HTML"
+  },
+  "sliding-puzzle": {
+    "lastFetched": 1778611522499,
+    "stats": {
+      "stars": 48,
+      "commits": 10,
+      "lastPush": "2014-05-19T17:17:23Z",
+      "relevanceScore": 0.31
+    },
+    "language": "JavaScript"
+  },
+  "sudoku-javascript": {
+    "lastFetched": 1778611523378,
+    "stats": {
+      "stars": 22,
+      "commits": 10,
+      "lastPush": "2018-11-15T23:12:11Z",
+      "relevanceScore": 0.26
+    },
+    "language": "JavaScript"
+  },
+  "swap": {
+    "lastFetched": 1778611524473,
+    "stats": {
+      "stars": 159,
+      "commits": 24,
+      "lastPush": "2019-05-10T19:36:20Z",
+      "relevanceScore": 0.4
+    },
+    "language": "JavaScript"
+  },
+  "transcube": {
+    "lastFetched": 1778611525441,
+    "stats": {
+      "stars": 229,
+      "commits": 216,
+      "lastPush": "2018-12-06T15:23:29Z",
+      "relevanceScore": 0.59
+    },
+    "language": "JavaScript"
+  },
+  "untrusted": {
+    "lastFetched": 1778611526341,
+    "stats": {
+      "stars": 4652,
+      "commits": 2192,
+      "lastPush": "2025-05-31T02:26:17Z",
+      "relevanceScore": 14.15
+    },
+    "language": "JavaScript"
+  },
+  "matching-pairs": {
+    "lastFetched": 1778611527209,
+    "stats": {
+      "stars": 25,
+      "commits": 15,
+      "lastPush": "2015-12-27T06:19:14Z",
+      "relevanceScore": 0.27
+    },
+    "language": "JavaScript"
+  },
+  "zoko": {
+    "lastFetched": 1778611528354,
+    "stats": {
+      "stars": 94,
+      "commits": 10,
+      "lastPush": "2021-11-23T13:56:48Z",
+      "relevanceScore": 1.39
+    },
+    "language": "CoffeeScript"
+  },
+  "zop": {
+    "lastFetched": 1778611529241,
+    "stats": {
+      "stars": 42,
+      "commits": 10,
+      "lastPush": "2020-05-12T00:25:24Z",
+      "relevanceScore": 0.3
+    },
+    "language": "HTML"
+  },
+  "particle-clicker": {
+    "lastFetched": 1778611530221,
+    "stats": {
+      "stars": 677,
+      "commits": 49,
+      "lastPush": "2024-04-02T17:28:05Z",
+      "relevanceScore": 5.93
+    },
+    "language": "JavaScript"
+  },
+  "the-house": {
+    "lastFetched": 1778611531106,
+    "stats": {
+      "stars": 210,
+      "commits": 183,
+      "lastPush": "2024-01-04T14:07:24Z",
+      "relevanceScore": 5.75
+    },
+    "language": "JavaScript"
+  },
+  "beast": {
+    "lastFetched": 1778611532553,
+    "stats": {
+      "stars": 58,
+      "commits": 39,
+      "lastPush": "2026-05-06T22:24:19Z",
+      "relevanceScore": 6.79
+    },
+    "language": "Rust"
+  },
+  "binb": {
+    "lastFetched": 1778611533503,
+    "stats": {
+      "stars": 307,
+      "commits": 10,
+      "lastPush": "2025-10-04T16:46:53Z",
+      "relevanceScore": 6.81
+    },
+    "language": "JavaScript"
+  },
+  "cyberpong": {
+    "lastFetched": 1778611534653,
+    "stats": {
+      "stars": 7,
+      "commits": 10,
+      "lastPush": "2016-09-27T19:46:21Z",
+      "relevanceScore": 0.19
+    },
+    "language": "CSS"
+  },
+  "dental-defender-saga-of-the-candy-horde": {
+    "lastFetched": 1778611535557,
+    "stats": {
+      "stars": 47,
+      "commits": 125,
+      "lastPush": "2015-06-10T18:01:45Z",
+      "relevanceScore": 0.46
+    },
+    "language": "JavaScript"
+  },
+  "descensus-2": {
+    "lastFetched": 1778611536462,
+    "stats": {
+      "stars": 20,
+      "commits": 19,
+      "lastPush": "2018-06-08T12:57:50Z",
+      "relevanceScore": 0.26
+    },
+    "language": "TypeScript"
+  },
+  "hauberk": {
+    "lastFetched": 1778611537410,
+    "stats": {
+      "stars": 2158,
+      "commits": 64,
+      "lastPush": "2026-02-14T21:02:10Z",
+      "relevanceScore": 10.89
+    },
+    "language": "Dart"
+  },
+  "heartline": {
+    "lastFetched": 1778611538444,
+    "stats": {
+      "stars": 3,
+      "commits": 10,
+      "lastPush": "2013-01-27T20:42:04Z",
+      "relevanceScore": 0.14
+    },
+    "language": "JavaScript"
+  },
+  "project-starfighter": {
+    "lastFetched": 1778611539361,
+    "stats": {
+      "stars": 49,
+      "commits": 1465,
+      "lastPush": "2026-02-06T05:25:03Z",
+      "relevanceScore": 9.14
+    },
+    "language": "C"
+  },
+  "psiral": {
+    "lastFetched": 1778611540920,
+    "stats": {
+      "stars": 70,
+      "commits": 174,
+      "lastPush": "2016-11-14T16:08:54Z",
+      "relevanceScore": 0.5
+    },
+    "language": "JavaScript"
+  },
+  "squirts": {
+    "lastFetched": 1778611541825,
+    "stats": {
+      "stars": 38,
+      "commits": 14,
+      "lastPush": "2018-04-20T19:40:56Z",
+      "relevanceScore": 0.3
+    },
+    "language": "JavaScript"
+  },
+  "the-killer": {
+    "lastFetched": 1778611542721,
+    "stats": {
+      "stars": 17,
+      "commits": 57,
+      "lastPush": "2022-04-01T01:16:05Z",
+      "relevanceScore": 1.45
+    },
+    "language": "ActionScript"
+  },
+  "turkey-cooking-simulator": {
+    "lastFetched": 1778611543683,
+    "stats": {
+      "stars": 26,
+      "commits": 1183,
+      "lastPush": "2024-11-30T19:56:53Z",
+      "relevanceScore": 6.79
+    },
+    "language": "JavaScript"
+  },
+  "double-damnation": {
+    "lastFetched": 1778611544564,
+    "stats": {
+      "stars": 21,
+      "commits": 4426,
+      "lastPush": "2022-09-24T14:53:35Z",
+      "relevanceScore": 2.26
+    },
+    "language": "C#"
+  },
+  "hypersomnia": {
+    "lastFetched": 1778611545523,
+    "stats": {
+      "stars": 1537,
+      "commits": 1747,
+      "lastPush": "2026-05-09T16:49:05Z",
+      "relevanceScore": 12.84
+    },
+    "language": "C++"
+  },
+  "opentomb": {
+    "lastFetched": 1778611546461,
+    "stats": {
+      "stars": 1443,
+      "commits": 371,
+      "lastPush": "2025-02-24T22:46:16Z",
+      "relevanceScore": 9.5
+    },
+    "language": "C++"
+  },
+  "openliberty": {
+    "lastFetched": 1778611547437,
+    "stats": {
+      "stars": 403,
+      "commits": 213,
+      "lastPush": "2025-06-25T11:51:56Z",
+      "relevanceScore": 9.98
+    },
+    "language": "GDScript"
+  },
+  "c-dogs-sdl": {
+    "lastFetched": 1778611548332,
+    "stats": {
+      "stars": 1056,
+      "commits": 1543,
+      "lastPush": "2026-05-09T09:43:59Z",
+      "relevanceScore": 12.36
+    },
+    "language": "C"
+  },
+  "chaos-projectile": {
+    "lastFetched": 1778611549253,
+    "stats": {
+      "stars": 69,
+      "commits": 449,
+      "lastPush": "2018-12-28T10:52:44Z",
+      "relevanceScore": 0.54
+    },
+    "language": "Python"
+  },
+  "clonepoint": {
+    "lastFetched": 1778611550157,
+    "stats": {
+      "stars": 70,
+      "commits": 10,
+      "lastPush": "2024-01-19T04:04:38Z",
+      "relevanceScore": 3.3
+    },
+    "language": "C++"
+  },
+  "dynadungeons": {
+    "lastFetched": 1778611551049,
+    "stats": {
+      "stars": 239,
+      "commits": 79,
+      "lastPush": "2024-04-24T09:30:54Z",
+      "relevanceScore": 5.47
+    },
+    "language": "GDScript"
+  },
+  "duckmarines": {
+    "lastFetched": 1778611552033,
+    "stats": {
+      "stars": 120,
+      "commits": 106,
+      "lastPush": "2019-06-02T00:25:59Z",
+      "relevanceScore": 0.51
+    },
+    "language": "Lua"
+  },
+  "falling-time": {
+    "lastFetched": 1778611552967,
+    "stats": {
+      "stars": 28,
+      "commits": 49,
+      "lastPush": "2021-10-19T22:29:38Z",
+      "relevanceScore": 1.55
+    },
+    "language": "C"
+  },
+  "kroniax": {
+    "lastFetched": 1778611553823,
+    "stats": {
+      "stars": 19,
+      "commits": 45,
+      "lastPush": "2015-09-11T19:22:05Z",
+      "relevanceScore": 0.36
+    },
+    "language": "Java"
+  },
+  "missile-command": {
+    "lastFetched": 1778611554715,
+    "stats": {
+      "stars": 21,
+      "commits": 10,
+      "lastPush": "2024-01-11T09:02:12Z",
+      "relevanceScore": 2.53
+    },
+    "language": "Lua"
+  },
+  "mystic-mine": {
+    "lastFetched": 1778611556097,
+    "stats": {
+      "stars": 84,
+      "commits": 186,
+      "lastPush": "2020-05-24T21:58:37Z",
+      "relevanceScore": 0.52
+    },
+    "language": "Python"
+  },
+  "openlierox": {
+    "lastFetched": 1778611557273,
+    "stats": {
+      "stars": 288,
+      "commits": 4204,
+      "lastPush": "2026-05-12T18:32:03Z",
+      "relevanceScore": 11.7
+    },
+    "language": "C++"
+  },
+  "osgg": {
+    "lastFetched": 1778611558170,
+    "stats": {
+      "stars": 13,
+      "commits": 10,
+      "lastPush": "2021-04-25T20:54:07Z",
+      "relevanceScore": 0.22
+    },
+    "language": "C++"
+  },
+  "savage-wheels": {
+    "lastFetched": 1778611559609,
+    "stats": {
+      "stars": 39,
+      "commits": 20,
+      "lastPush": "2022-04-18T17:40:46Z",
+      "relevanceScore": 1.22
+    },
+    "language": "C++"
+  },
+  "space-shooter--2": {
+    "lastFetched": 1778611560696,
+    "stats": {
+      "stars": 521,
+      "commits": 29,
+      "lastPush": "2022-09-09T08:43:20Z",
+      "relevanceScore": 1.93
+    },
+    "language": "Python"
+  },
+  "sdl-ball": {
+    "lastFetched": 1778611561607,
+    "stats": {
+      "stars": 17,
+      "commits": 132,
+      "lastPush": "2022-10-20T20:08:34Z",
+      "relevanceScore": 1.6
+    },
+    "language": "C++"
+  },
+  "taisei": {
+    "lastFetched": 1778611563064,
+    "stats": {
+      "stars": 1527,
+      "commits": 9122,
+      "lastPush": "2026-04-11T02:40:37Z",
+      "relevanceScore": 13.98
+    },
+    "language": "C"
+  },
+  "teeworlds": {
+    "lastFetched": 1778611564035,
+    "stats": {
+      "stars": 2609,
+      "commits": 1111,
+      "lastPush": "2025-07-12T18:34:36Z",
+      "relevanceScore": 13.07
+    },
+    "language": "C++"
+  },
+  "wannabe-tempest": {
+    "lastFetched": 1778611564941,
+    "stats": {
+      "stars": 19,
+      "commits": 11,
+      "lastPush": "2015-03-09T01:02:13Z",
+      "relevanceScore": 0.25
+    },
+    "language": "Java"
+  },
+  "witch-blast": {
+    "lastFetched": 1778611565833,
+    "stats": {
+      "stars": 225,
+      "commits": 1063,
+      "lastPush": "2023-12-13T17:53:02Z",
+      "relevanceScore": 6.56
+    },
+    "language": "C++"
+  },
+  "osu": {
+    "lastFetched": 1778611566951,
+    "stats": {
+      "stars": 18332,
+      "commits": 2039,
+      "lastPush": "2026-05-12T18:03:42Z",
+      "relevanceScore": 15.53
+    },
+    "language": "C#"
+  },
+  "assaultcube": {
+    "lastFetched": 1778611567907,
+    "stats": {
+      "stars": 994,
+      "commits": 6264,
+      "lastPush": "2026-02-20T01:36:47Z",
+      "relevanceScore": 13.27
+    },
+    "language": "C"
+  },
+  "darkest-hour": {
+    "lastFetched": 1778611568892,
+    "stats": {
+      "stars": 11,
+      "commits": 765,
+      "lastPush": "2026-05-12T18:35:01Z",
+      "relevanceScore": 7.2
+    },
+    "language": "UnrealScript"
+  },
+  "freedoom": {
+    "lastFetched": 1778611569851,
+    "stats": {
+      "stars": 1276,
+      "commits": 1455,
+      "lastPush": "2025-12-06T15:49:58Z",
+      "relevanceScore": 12.52
+    },
+    "language": "Python"
+  },
+  "glportal": {
+    "lastFetched": 1778611570837,
+    "stats": {
+      "stars": 378,
+      "commits": 81,
+      "lastPush": "2024-10-05T16:52:47Z",
+      "relevanceScore": 7.51
+    },
+    "language": "C++"
+  },
+  "ioquake3": {
+    "lastFetched": 1778611571971,
+    "stats": {
+      "stars": 2739,
+      "commits": 952,
+      "lastPush": "2026-03-09T11:01:13Z",
+      "relevanceScore": 13.02
+    },
+    "language": "C"
+  },
+  "openlara": {
+    "lastFetched": 1778611572849,
+    "stats": {
+      "stars": 4995,
+      "commits": 438,
+      "lastPush": "2026-03-06T11:33:54Z",
+      "relevanceScore": 13.1
+    },
+    "language": "C"
+  },
+  "openspades": {
+    "lastFetched": 1778611573733,
+    "stats": {
+      "stars": 1215,
+      "commits": 189,
+      "lastPush": "2024-06-06T23:14:52Z",
+      "relevanceScore": 8.97
+    },
+    "language": "C++"
+  },
+  "unvanquished": {
+    "lastFetched": 1778611575678,
+    "stats": {
+      "stars": 1098,
+      "commits": 2115,
+      "lastPush": "2026-05-11T09:42:14Z",
+      "relevanceScore": 12.62
+    },
+    "language": "C++"
+  },
+  "urban-terror": {
+    "lastFetched": 1778611576647,
+    "stats": {
+      "stars": 77,
+      "commits": 23,
+      "lastPush": "2018-08-17T12:00:19Z",
+      "relevanceScore": 0.35
+    },
+    "language": "C"
+  },
+  "meridian-59": {
+    "lastFetched": 1778611580522,
+    "stats": {
+      "stars": 492,
+      "commits": 887,
+      "lastPush": "2026-05-10T02:51:59Z",
+      "relevanceScore": 11.18
+    },
+    "language": "C++"
+  },
+  "stendhal": {
+    "lastFetched": 1778611581494,
+    "stats": {
+      "stars": 684,
+      "commits": 11511,
+      "lastPush": "2026-03-01T22:04:55Z",
+      "relevanceScore": 13.3
+    },
+    "language": "Java"
+  },
+  "angband": {
+    "lastFetched": 1778611583415,
+    "stats": {
+      "stars": 1503,
+      "commits": 1231,
+      "lastPush": "2026-05-12T12:01:52Z",
+      "relevanceScore": 12.57
+    },
+    "language": "C"
+  },
+  "arx-fatalis": {
+    "lastFetched": 1778611584379,
+    "stats": {
+      "stars": 1057,
+      "commits": 496,
+      "lastPush": "2024-08-22T17:58:15Z",
+      "relevanceScore": 9.4
+    },
+    "language": "C++"
+  },
+  "cataclysm-dark-days-ahead": {
+    "lastFetched": 1778611585336,
+    "stats": {
+      "stars": 12322,
+      "commits": 125391,
+      "lastPush": "2026-05-12T14:43:48Z",
+      "relevanceScore": 17.97
+    },
+    "language": "C++"
+  },
+  "cendric": {
+    "lastFetched": 1778611586250,
+    "stats": {
+      "stars": 308,
+      "commits": 8848,
+      "lastPush": "2026-03-30T16:59:15Z",
+      "relevanceScore": 12.29
+    },
+    "language": "C"
+  },
+  "dungeon-crawl-stone-soup": {
+    "lastFetched": 1778611587228,
+    "stats": {
+      "stars": 2861,
+      "commits": 3303,
+      "lastPush": "2026-05-11T22:33:36Z",
+      "relevanceScore": 13.93
+    },
+    "language": "C++"
+  },
+  "dungeon-monkey-eternal": {
+    "lastFetched": 1778611588116,
+    "stats": {
+      "stars": 60,
+      "commits": 253,
+      "lastPush": "2021-06-28T12:24:37Z",
+      "relevanceScore": 2.03
+    },
+    "language": "Python"
+  },
+  "egoboo": {
+    "lastFetched": 1778611589065,
+    "stats": {
+      "stars": 127,
+      "commits": 1981,
+      "lastPush": "2025-03-02T15:46:58Z",
+      "relevanceScore": 8.4
+    },
+    "language": "C++"
+  },
+  "flare-rpg": {
+    "lastFetched": 1778611590070,
+    "stats": {
+      "stars": 88,
+      "commits": 8490,
+      "lastPush": "2018-09-17T20:30:00Z",
+      "relevanceScore": 0.69
+    },
+    "language": "Python"
+  },
+  "freeablo": {
+    "lastFetched": 1778611590989,
+    "stats": {
+      "stars": 2172,
+      "commits": 322,
+      "lastPush": "2023-04-13T22:28:25Z",
+      "relevanceScore": 3.01
+    },
+    "language": "C++"
+  },
+  "nethack": {
+    "lastFetched": 1778611591932,
+    "stats": {
+      "stars": 3727,
+      "commits": 1647,
+      "lastPush": "2026-05-12T17:37:16Z",
+      "relevanceScore": 13.72
+    },
+    "language": "C"
+  },
+  "openmw": {
+    "lastFetched": 1778611592858,
+    "stats": {
+      "stars": 6309,
+      "commits": 1077,
+      "lastPush": "2026-05-12T16:13:06Z",
+      "relevanceScore": 13.97
+    },
+    "language": "C++"
+  },
+  "the-legend-of-zelda-mystery-of-solarus-dx": {
+    "lastFetched": 1778611595175,
+    "stats": {
+      "stars": 193,
+      "commits": 490,
+      "lastPush": "2018-04-07T10:39:03Z",
+      "relevanceScore": 0.61
+    },
+    "language": "Lua"
+  },
+  "valyria-tear": {
+    "lastFetched": 1778611596430,
+    "stats": {
+      "stars": 251,
+      "commits": 2581,
+      "lastPush": "2022-01-02T02:10:34Z",
+      "relevanceScore": 2.81
+    },
+    "language": "Lua"
+  },
+  "aaaaxy": {
+    "lastFetched": 1778611598210,
+    "stats": {
+      "stars": 282,
+      "commits": 521,
+      "lastPush": "2026-05-12T15:26:09Z",
+      "relevanceScore": 10.23
+    },
+    "language": "Go"
+  },
+  "commander-genius": {
+    "lastFetched": 1778611599124,
+    "stats": {
+      "stars": 221,
+      "commits": 1584,
+      "lastPush": "2026-02-15T16:44:49Z",
+      "relevanceScore": 10.75
+    },
+    "language": "C++"
+  },
+  "ddracenetwork": {
+    "lastFetched": 1778611600123,
+    "stats": {
+      "stars": 776,
+      "commits": 3803,
+      "lastPush": "2026-05-11T21:44:05Z",
+      "relevanceScore": 12.67
+    },
+    "language": "C++"
+  },
+  "elemental-one": {
+    "lastFetched": 1778611601028,
+    "stats": {
+      "stars": 46,
+      "commits": 150,
+      "lastPush": "2015-08-16T20:19:47Z",
+      "relevanceScore": 0.47
+    },
+    "language": "JavaScript"
+  },
+  "escape-of-the-cat": {
+    "lastFetched": 1778611602432,
+    "stats": {
+      "stars": 8,
+      "commits": 35,
+      "lastPush": "2017-11-01T08:20:49Z",
+      "relevanceScore": 0.3
+    },
+    "language": "Lua"
+  },
+  "frogatto": {
+    "lastFetched": 1778611603382,
+    "stats": {
+      "stars": 666,
+      "commits": 18675,
+      "lastPush": "2025-11-20T22:26:51Z",
+      "relevanceScore": 13.61
+    },
+    "language": "Ruby"
+  },
+  "gish": {
+    "lastFetched": 1778611604271,
+    "stats": {
+      "stars": 349,
+      "commits": 170,
+      "lastPush": "2017-01-12T14:19:55Z",
+      "relevanceScore": 0.6
+    },
+    "language": "C"
+  },
+  "journey-to-the-center-of-hawkthorne": {
+    "lastFetched": 1778611605232,
+    "stats": {
+      "stars": 1149,
+      "commits": 2510,
+      "lastPush": "2024-11-26T22:24:01Z",
+      "relevanceScore": 10.39
+    },
+    "language": "Lua"
+  },
+  "mario-level-1": {
+    "lastFetched": 1778611606092,
+    "stats": {
+      "stars": 2223,
+      "commits": 150,
+      "lastPush": "2023-04-24T20:25:32Z",
+      "relevanceScore": 2.88
+    },
+    "language": "Python"
+  },
+  "hft-mario-party": {
+    "lastFetched": 1778611606956,
+    "stats": {
+      "stars": 73,
+      "commits": 31,
+      "lastPush": "2015-10-31T18:08:55Z",
+      "relevanceScore": 0.43
+    },
+    "language": "C#"
+  },
+  "sky-engine": {
+    "lastFetched": 1778611607848,
+    "stats": {
+      "stars": 16,
+      "commits": 107,
+      "lastPush": "2017-01-11T21:06:49Z",
+      "relevanceScore": 0.39
+    },
+    "language": "C++"
+  },
+  "the-legend-of-edgar": {
+    "lastFetched": 1778611608738,
+    "stats": {
+      "stars": 134,
+      "commits": 4213,
+      "lastPush": "2026-02-09T22:38:22Z",
+      "relevanceScore": 10.91
+    },
+    "language": "C"
+  },
+  "the-secret-chronicles-of-dr-m": {
+    "lastFetched": 1778611609735,
+    "stats": {
+      "stars": 223,
+      "commits": 4549,
+      "lastPush": "2026-05-09T18:25:41Z",
+      "relevanceScore": 11.49
+    },
+    "language": "C++"
+  },
+  "retux": {
+    "lastFetched": 1778611610718,
+    "stats": {
+      "stars": 39,
+      "commits": 677,
+      "lastPush": "2024-05-10T23:35:12Z",
+      "relevanceScore": 5.23
+    },
+    "language": "Python"
+  },
+  "super-bombinhas": {
+    "lastFetched": 1778611611651,
+    "stats": {
+      "stars": 310,
+      "commits": 954,
+      "lastPush": "2025-05-09T10:52:43Z",
+      "relevanceScore": 8.73
+    },
+    "language": "Ruby"
+  },
+  "supertux": {
+    "lastFetched": 1778611612648,
+    "stats": {
+      "stars": 3024,
+      "commits": 8422,
+      "lastPush": "2026-05-12T18:10:43Z",
+      "relevanceScore": 14.63
+    },
+    "language": "C++"
+  },
+  "2048-cli": {
+    "lastFetched": 1778611613535,
+    "stats": {
+      "stars": 269,
+      "commits": 10,
+      "lastPush": "2024-01-31T03:35:06Z",
+      "relevanceScore": 4.17
+    },
+    "language": "C"
+  },
+  "2048-in-terminal": {
+    "lastFetched": 1778611614411,
+    "stats": {
+      "stars": 161,
+      "commits": 10,
+      "lastPush": "2023-04-05T03:53:26Z",
+      "relevanceScore": 1.53
+    },
+    "language": "C"
+  },
+  "castles-of-dr-creep": {
+    "lastFetched": 1778611615323,
+    "stats": {
+      "stars": 32,
+      "commits": 1526,
+      "lastPush": "2022-03-18T21:13:30Z",
+      "relevanceScore": 2.18
+    },
+    "language": "C++"
+  },
+  "dominion": {
+    "lastFetched": 1778611616224,
+    "stats": {
+      "stars": 71,
+      "commits": 79,
+      "lastPush": "2011-06-01T20:08:46Z",
+      "relevanceScore": 0.47
+    },
+    "language": "C#"
+  },
+  "ebbeflut": {
+    "lastFetched": 1778611617118,
+    "stats": {
+      "stars": 4,
+      "commits": 10,
+      "lastPush": "2017-01-14T09:57:47Z",
+      "relevanceScore": 0.16
+    },
+    "language": "Java"
+  },
+  "irmingard": {
+    "lastFetched": 1778611618167,
+    "stats": {
+      "stars": 7,
+      "commits": 20,
+      "lastPush": "2012-11-13T23:03:46Z",
+      "relevanceScore": 0.2
+    },
+    "language": "CoffeeScript"
+  },
+  "minilens": {
+    "lastFetched": 1778611619178,
+    "stats": {
+      "stars": 141,
+      "commits": 752,
+      "lastPush": "2018-07-16T19:09:42Z",
+      "relevanceScore": 0.61
+    },
+    "language": "GDScript"
+  },
+  "nudoku": {
+    "lastFetched": 1778611620046,
+    "stats": {
+      "stars": 374,
+      "commits": 10,
+      "lastPush": "2026-05-06T06:37:54Z",
+      "relevanceScore": 7.01
+    },
+    "language": "C"
+  },
+  "puzzledash": {
+    "lastFetched": 1778611621472,
+    "stats": {
+      "stars": 11,
+      "commits": 651,
+      "lastPush": "2014-05-19T21:33:36Z",
+      "relevanceScore": 0.44
+    },
+    "language": "D"
+  },
+  "tictactoe": {
+    "lastFetched": 1778611622334,
+    "stats": {
+      "stars": 13,
+      "commits": 10,
+      "lastPush": "2023-09-21T01:46:13Z",
+      "relevanceScore": 2.24
+    },
+    "language": "Java"
+  },
+  "wizznic": {
+    "lastFetched": 1778611623207,
+    "stats": {
+      "stars": 42,
+      "commits": 583,
+      "lastPush": "2021-04-25T20:54:57Z",
+      "relevanceScore": 0.52
+    },
+    "language": "C"
+  },
+  "pokerth": {
+    "lastFetched": 1778611624152,
+    "stats": {
+      "stars": 611,
+      "commits": 669,
+      "lastPush": "2026-05-08T13:11:59Z",
+      "relevanceScore": 11.21
+    },
+    "language": "C++"
+  },
+  "stunt-rally": {
+    "lastFetched": 1778611625959,
+    "stats": {
+      "stars": 644,
+      "commits": 13542,
+      "lastPush": "2024-08-13T19:04:11Z",
+      "relevanceScore": 10.85
+    },
+    "language": "C++"
+  },
+  "supertuxkart": {
+    "lastFetched": 1778611626960,
+    "stats": {
+      "stars": 5198,
+      "commits": 3859,
+      "lastPush": "2026-05-11T14:28:10Z",
+      "relevanceScore": 14.66
+    },
+    "language": "C++"
+  },
+  "cengball": {
+    "lastFetched": 1778611627845,
+    "stats": {
+      "stars": 38,
+      "commits": 203,
+      "lastPush": "2021-01-29T19:14:15Z",
+      "relevanceScore": 0.47
+    },
+    "language": "Java"
+  },
+  "blackvoxel": {
+    "lastFetched": 1778611628759,
+    "stats": {
+      "stars": 107,
+      "commits": 296,
+      "lastPush": "2024-05-30T20:22:19Z",
+      "relevanceScore": 7.18
+    },
+    "language": "C++"
+  },
+  "craft": {
+    "lastFetched": 1778611629649,
+    "stats": {
+      "stars": 11002,
+      "commits": 147,
+      "lastPush": "2024-04-03T15:49:34Z",
+      "relevanceScore": 8.23
+    },
+    "language": "C"
+  },
+  "endless-sky": {
+    "lastFetched": 1778611630607,
+    "stats": {
+      "stars": 7322,
+      "commits": 5864,
+      "lastPush": "2026-05-11T17:58:51Z",
+      "relevanceScore": 15.3
+    },
+    "language": "C++"
+  },
+  "freeminer": {
+    "lastFetched": 1778611631593,
+    "stats": {
+      "stars": 460,
+      "commits": 1452,
+      "lastPush": "2026-05-12T17:10:16Z",
+      "relevanceScore": 11.45
+    },
+    "language": "C++"
+  },
+  "minecraft": {
+    "lastFetched": 1778611632490,
+    "stats": {
+      "stars": 5413,
+      "commits": 10,
+      "lastPush": "2023-06-10T17:18:28Z",
+      "relevanceScore": 6.12
+    },
+    "language": "Python"
+  },
+  "manic-digger": {
+    "lastFetched": 1778611633440,
+    "stats": {
+      "stars": 396,
+      "commits": 370,
+      "lastPush": "2024-09-03T19:08:14Z",
+      "relevanceScore": 8.41
+    },
+    "language": "C#"
+  },
+  "minetest": {
+    "lastFetched": 1778611634877,
+    "stats": {
+      "stars": 12861,
+      "commits": 1375,
+      "lastPush": "2026-05-12T08:37:29Z",
+      "relevanceScore": 14.88
+    },
+    "language": "C++"
+  },
+  "pycraft": {
+    "lastFetched": 1778611635846,
+    "stats": {
+      "stars": 205,
+      "commits": 10,
+      "lastPush": "2026-04-09T13:36:52Z",
+      "relevanceScore": 6.39
+    },
+    "language": "Python"
+  },
+  "rigs-of-rods": {
+    "lastFetched": 1778611636811,
+    "stats": {
+      "stars": 1190,
+      "commits": 2319,
+      "lastPush": "2026-05-08T22:01:25Z",
+      "relevanceScore": 12.77
+    },
+    "language": "C++"
+  },
+  "space-engineers": {
+    "lastFetched": 1778611637749,
+    "stats": {
+      "stars": 2974,
+      "commits": 4869,
+      "lastPush": "2022-01-06T13:46:01Z",
+      "relevanceScore": 3.56
+    },
+    "language": "C#"
+  },
+  "starbound": {
+    "lastFetched": 1778611638613,
+    "stats": {
+      "stars": 145,
+      "commits": 411,
+      "lastPush": "2024-05-15T02:01:03Z",
+      "relevanceScore": 7.62
+    },
+    "language": "C"
+  },
+  "terasology": {
+    "lastFetched": 1778611639554,
+    "stats": {
+      "stars": 3856,
+      "commits": 3059,
+      "lastPush": "2026-04-19T19:48:40Z",
+      "relevanceScore": 14.18
+    },
+    "language": "Java"
+  },
+  "the-powder-toy": {
+    "lastFetched": 1778611641000,
+    "stats": {
+      "stars": 5116,
+      "commits": 406,
+      "lastPush": "2026-05-12T08:35:23Z",
+      "relevanceScore": 13.08
+    },
+    "language": "C++"
+  },
+  "0-a-d": {
+    "lastFetched": 1778611641915,
+    "stats": {
+      "stars": 2808,
+      "commits": 86978,
+      "lastPush": "2024-08-17T03:00:37Z",
+      "relevanceScore": 13.15
+    },
+    "language": "C++"
+  },
+  "caesaria": {
+    "lastFetched": 1778611643721,
+    "stats": {
+      "stars": 286,
+      "commits": 5394,
+      "lastPush": "2017-09-09T02:53:05Z",
+      "relevanceScore": 0.74
+    },
+    "language": "C"
+  },
+  "colobot": {
+    "lastFetched": 1778611644694,
+    "stats": {
+      "stars": 1230,
+      "commits": 574,
+      "lastPush": "2026-03-04T21:17:33Z",
+      "relevanceScore": 11.83
+    },
+    "language": "C++"
+  },
+  "corsixth": {
+    "lastFetched": 1778611645695,
+    "stats": {
+      "stars": 4408,
+      "commits": 401,
+      "lastPush": "2026-05-11T20:35:19Z",
+      "relevanceScore": 12.91
+    },
+    "language": "Lua"
+  },
+  "curse-of-war": {
+    "lastFetched": 1778611646611,
+    "stats": {
+      "stars": 358,
+      "commits": 10,
+      "lastPush": "2024-05-13T14:53:10Z",
+      "relevanceScore": 5.66
+    },
+    "language": "C"
+  },
+  "harris": {
+    "lastFetched": 1778611647491,
+    "stats": {
+      "stars": 28,
+      "commits": 149,
+      "lastPush": "2026-03-29T11:23:45Z",
+      "relevanceScore": 6.99
+    },
+    "language": "C"
+  },
+  "hedgewars": {
+    "lastFetched": 1778611648447,
+    "stats": {
+      "stars": 542,
+      "commits": 6976,
+      "lastPush": "2026-02-26T06:25:05Z",
+      "relevanceScore": 12.71
+    },
+    "language": "Lua"
+  },
+  "kam-remake": {
+    "lastFetched": 1778611649320,
+    "stats": {
+      "stars": 373,
+      "commits": 2633,
+      "lastPush": "2022-06-01T17:40:02Z",
+      "relevanceScore": 2.91
+    },
+    "language": "Pascal"
+  },
+  "keeperrl": {
+    "lastFetched": 1778611650240,
+    "stats": {
+      "stars": 970,
+      "commits": 415,
+      "lastPush": "2025-10-27T19:50:05Z",
+      "relevanceScore": 11.36
+    },
+    "language": "C++"
+  },
+  "last-colony": {
+    "lastFetched": 1778611651181,
+    "stats": {
+      "stars": 93,
+      "commits": 33,
+      "lastPush": "2013-06-16T11:15:39Z",
+      "relevanceScore": 0.45
+    },
+    "language": "JavaScript"
+  },
+  "megaglest": {
+    "lastFetched": 1778611652175,
+    "stats": {
+      "stars": 401,
+      "commits": 529,
+      "lastPush": "2026-05-01T21:38:58Z",
+      "relevanceScore": 10.61
+    },
+    "language": "C++"
+  },
+  "micropolis": {
+    "lastFetched": 1778611653059,
+    "stats": {
+      "stars": 1057,
+      "commits": 1013,
+      "lastPush": "2026-02-10T20:58:09Z",
+      "relevanceScore": 12.07
+    },
+    "language": "C"
+  },
+  "openage": {
+    "lastFetched": 1778611654013,
+    "stats": {
+      "stars": 14208,
+      "commits": 188,
+      "lastPush": "2025-06-14T09:20:29Z",
+      "relevanceScore": 13.6
+    },
+    "language": "Python"
+  },
+  "opendungeons": {
+    "lastFetched": 1778611654970,
+    "stats": {
+      "stars": 494,
+      "commits": 3535,
+      "lastPush": "2025-10-03T23:56:55Z",
+      "relevanceScore": 12.14
+    },
+    "language": "C++"
+  },
+  "opene2140": {
+    "lastFetched": 1778611655915,
+    "stats": {
+      "stars": 65,
+      "commits": 877,
+      "lastPush": "2026-05-01T17:23:30Z",
+      "relevanceScore": 9.08
+    },
+    "language": "C#"
+  },
+  "openfodder": {
+    "lastFetched": 1778611656863,
+    "stats": {
+      "stars": 591,
+      "commits": 70,
+      "lastPush": "2026-05-10T07:32:02Z",
+      "relevanceScore": 9.61
+    },
+    "language": "C++"
+  },
+  "openkrush": {
+    "lastFetched": 1778611657758,
+    "stats": {
+      "stars": 120,
+      "commits": 563,
+      "lastPush": "2025-11-17T08:19:26Z",
+      "relevanceScore": 9.4
+    },
+    "language": "C#"
+  },
+  "openra": {
+    "lastFetched": 1778611658713,
+    "stats": {
+      "stars": 16682,
+      "commits": 3510,
+      "lastPush": "2026-05-01T15:46:48Z",
+      "relevanceScore": 15.81
+    },
+    "language": "C#"
+  },
+  "opensa": {
+    "lastFetched": 1778611659599,
+    "stats": {
+      "stars": 119,
+      "commits": 366,
+      "lastPush": "2023-10-01T19:41:56Z",
+      "relevanceScore": 5.68
+    },
+    "language": "C#"
+  },
+  "openttd": {
+    "lastFetched": 1778611660550,
+    "stats": {
+      "stars": 7861,
+      "commits": 7014,
+      "lastPush": "2026-05-12T06:48:17Z",
+      "relevanceScore": 15.5
+    },
+    "language": "C++"
+  },
+  "openxcom": {
+    "lastFetched": 1778611661994,
+    "stats": {
+      "stars": 2173,
+      "commits": 347,
+      "lastPush": "2026-03-19T05:09:54Z",
+      "relevanceScore": 12.07
+    },
+    "language": "C++"
+  },
+  "pax-britannica": {
+    "lastFetched": 1778611662851,
+    "stats": {
+      "stars": 99,
+      "commits": 302,
+      "lastPush": "2011-05-14T03:31:32Z",
+      "relevanceScore": 0.55
+    },
+    "language": "Lua"
+  },
+  "pcotm-phone-case-of-the-monster": {
+    "lastFetched": 1778611663773,
+    "stats": {
+      "stars": 7,
+      "commits": 444,
+      "lastPush": "2013-03-15T04:04:32Z",
+      "relevanceScore": 0.4
+    },
+    "language": "Ruby"
+  },
+  "pikifen": {
+    "lastFetched": 1778611664678,
+    "stats": {
+      "stars": 77,
+      "commits": 2984,
+      "lastPush": "2026-05-06T21:22:31Z",
+      "relevanceScore": 10.1
+    },
+    "language": "C++"
+  },
+  "pioneer": {
+    "lastFetched": 1778611665647,
+    "stats": {
+      "stars": 1860,
+      "commits": 12943,
+      "lastPush": "2026-05-08T03:07:13Z",
+      "relevanceScore": 14.43
+    },
+    "language": "C++"
+  },
+  "polly-b-gone": {
+    "lastFetched": 1778611666575,
+    "stats": {
+      "stars": 64,
+      "commits": 81,
+      "lastPush": "2020-06-06T20:59:29Z",
+      "relevanceScore": 0.46
+    },
+    "language": "C++"
+  },
+  "openrct2": {
+    "lastFetched": 1778611667594,
+    "stats": {
+      "stars": 15600,
+      "commits": 2734,
+      "lastPush": "2026-05-08T20:16:02Z",
+      "relevanceScore": 15.56
+    },
+    "language": "C++"
+  },
+  "race-into-space": {
+    "lastFetched": 1778611668511,
+    "stats": {
+      "stars": 208,
+      "commits": 1710,
+      "lastPush": "2026-05-11T22:32:32Z",
+      "relevanceScore": 10.74
+    },
+    "language": "C++"
+  },
+  "romanov-s-vengeance": {
+    "lastFetched": 1778611669456,
+    "stats": {
+      "stars": 328,
+      "commits": 1815,
+      "lastPush": "2025-07-26T17:44:53Z",
+      "relevanceScore": 11.26
+    },
+    "language": "C#"
+  },
+  "seven-kingdoms-ancient-adversaries": {
+    "lastFetched": 1778611670324,
+    "stats": {
+      "stars": 264,
+      "commits": 643,
+      "lastPush": "2023-09-25T17:46:13Z",
+      "relevanceScore": 6.44
+    },
+    "language": "C++"
+  },
+  "shattered-paradise": {
+    "lastFetched": 1778611671209,
+    "stats": {
+      "stars": 79,
+      "commits": 3753,
+      "lastPush": "2025-09-27T08:16:26Z",
+      "relevanceScore": 10.29
+    },
+    "language": "C#"
+  },
+  "source-of-tales": {
+    "lastFetched": 1778611672116,
+    "stats": {
+      "stars": 59,
+      "commits": 305,
+      "lastPush": "2018-06-26T21:45:18Z",
+      "relevanceScore": 0.52
+    },
+    "language": "Lua"
+  },
+  "tanks-of-freedom": {
+    "lastFetched": 1778611673029,
+    "stats": {
+      "stars": 1190,
+      "commits": 1013,
+      "lastPush": "2025-02-03T10:54:41Z",
+      "relevanceScore": 9.91
+    },
+    "language": "GDScript"
+  },
+  "the-battle-for-wesnoth": {
+    "lastFetched": 1778611673983,
+    "stats": {
+      "stars": 6641,
+      "commits": 49302,
+      "lastPush": "2026-05-11T18:52:33Z",
+      "relevanceScore": 16.68
+    },
+    "language": "C++"
+  },
+  "voxeliq": {
+    "lastFetched": 1778611676322,
+    "stats": {
+      "stars": 168,
+      "commits": 784,
+      "lastPush": "2020-02-13T09:58:27Z",
+      "relevanceScore": 0.62
+    },
+    "language": "C#"
+  },
+  "wargus": {
+    "lastFetched": 1778611677289,
+    "stats": {
+      "stars": 417,
+      "commits": 725,
+      "lastPush": "2026-05-10T15:51:07Z",
+      "relevanceScore": 10.87
+    },
+    "language": "C"
+  },
+  "warzone-2100": {
+    "lastFetched": 1778611678234,
+    "stats": {
+      "stars": 3806,
+      "commits": 7129,
+      "lastPush": "2026-05-12T03:11:46Z",
+      "relevanceScore": 14.76
+    },
+    "language": "C++"
+  },
+  "wyrmsun": {
+    "lastFetched": 1778611679109,
+    "stats": {
+      "stars": 329,
+      "commits": 7626,
+      "lastPush": "2025-04-17T07:05:26Z",
+      "relevanceScore": 9.96
+    },
+    "language": "Lua"
+  },
+  "zero-k": {
+    "lastFetched": 1778611680080,
+    "stats": {
+      "stars": 802,
+      "commits": 11033,
+      "lastPush": "2026-05-05T12:11:33Z",
+      "relevanceScore": 13.44
+    },
+    "language": "Lua"
+  },
+  "chasewhisplyproject": {
+    "lastFetched": 1778611681025,
+    "stats": {
+      "stars": 551,
+      "commits": 145,
+      "lastPush": "2024-03-16T06:40:06Z",
+      "relevanceScore": 6.27
+    },
+    "language": "Java"
+  },
+  "colorphun": {
+    "lastFetched": 1778611681927,
+    "stats": {
+      "stars": 85,
+      "commits": 17,
+      "lastPush": "2014-12-16T13:07:34Z",
+      "relevanceScore": 0.35
+    },
+    "language": "Java"
+  },
+  "game-of-life": {
+    "lastFetched": 1778611682812,
+    "stats": {
+      "stars": 104,
+      "commits": 58,
+      "lastPush": "2023-01-31T19:04:05Z",
+      "relevanceScore": 1.92
+    },
+    "language": "Java"
+  },
+  "gidi-games": {
+    "lastFetched": 1778611684216,
+    "stats": {
+      "stars": 69,
+      "commits": 101,
+      "lastPush": "2022-01-02T04:16:48Z",
+      "relevanceScore": 1.91
+    },
+    "language": "Java"
+  },
+  "green-wall": {
+    "lastFetched": 1778611685129,
+    "stats": {
+      "stars": 22,
+      "commits": 23,
+      "lastPush": "2015-05-05T21:12:02Z",
+      "relevanceScore": 0.27
+    },
+    "language": "Java"
+  },
+  "memory-game": {
+    "lastFetched": 1778611686044,
+    "stats": {
+      "stars": 597,
+      "commits": 122,
+      "lastPush": "2021-05-23T22:29:39Z",
+      "relevanceScore": 2.5
+    },
+    "language": "Java"
+  },
+  "pimple-popper": {
+    "lastFetched": 1778611686985,
+    "stats": {
+      "stars": 45,
+      "commits": 8472,
+      "lastPush": "2026-01-06T07:49:39Z",
+      "relevanceScore": 10.28
+    },
+    "language": "GDScript"
+  },
+  "pixel-dungeon": {
+    "lastFetched": 1778611687863,
+    "stats": {
+      "stars": 3882,
+      "commits": 82,
+      "lastPush": "2019-07-23T09:09:27Z",
+      "relevanceScore": 0.73
+    },
+    "language": "Java"
+  },
+  "puzzlegame": {
+    "lastFetched": 1778611689213,
+    "stats": {
+      "stars": 67,
+      "commits": 18,
+      "lastPush": "2016-07-09T16:36:02Z",
+      "relevanceScore": 0.34
+    },
+    "language": "Java"
+  },
+  "wannabe-tempest--2": {
+    "lastFetched": 1778611690118,
+    "stats": {
+      "stars": 21,
+      "commits": 10,
+      "lastPush": "2016-03-03T02:04:39Z",
+      "relevanceScore": 0.25
+    },
+    "language": "Java"
+  },
+  "bat-loves-bugs": {
+    "lastFetched": 1778611691939,
+    "stats": {
+      "stars": 10,
+      "commits": 248,
+      "lastPush": "2015-08-14T17:31:07Z",
+      "relevanceScore": 0.4
+    },
+    "language": "HTML"
+  },
+  "bridges": {
+    "lastFetched": 1778611692826,
+    "stats": {
+      "stars": 177,
+      "commits": 1090,
+      "lastPush": "2023-11-22T20:24:52Z",
+      "relevanceScore": 6.41
+    },
+    "language": "Objective-C"
+  },
+  "canabalt": {
+    "lastFetched": 1778611693740,
+    "stats": {
+      "stars": 1588,
+      "commits": 121,
+      "lastPush": "2011-08-20T03:32:45Z",
+      "relevanceScore": 0.69
+    },
+    "language": "Objective-C"
+  },
+  "choose-figure": {
+    "lastFetched": 1778611694637,
+    "stats": {
+      "stars": 48,
+      "commits": 19,
+      "lastPush": "2018-02-14T18:54:03Z",
+      "relevanceScore": 0.32
+    },
+    "language": "Swift"
+  },
+  "doom": {
+    "lastFetched": 1778611695669,
+    "stats": {
+      "stars": 829,
+      "commits": 117,
+      "lastPush": "2023-01-12T12:22:10Z",
+      "relevanceScore": 2.58
+    },
+    "language": "C"
+  },
+  "drugsnrock": {
+    "lastFetched": 1778611696554,
+    "stats": {
+      "stars": 15,
+      "commits": 300,
+      "lastPush": "2014-02-21T20:00:19Z",
+      "relevanceScore": 0.43
+    },
+    "language": "Objective-C"
+  },
+  "finalfighter": {
+    "lastFetched": 1778611697447,
+    "stats": {
+      "stars": 16,
+      "commits": 448,
+      "lastPush": "2015-08-05T18:33:14Z",
+      "relevanceScore": 0.45
+    },
+    "language": "Objective-C"
+  },
+  "gorillas": {
+    "lastFetched": 1778611698432,
+    "stats": {
+      "stars": 247,
+      "commits": 5592,
+      "lastPush": "2014-05-22T03:37:18Z",
+      "relevanceScore": 0.73
+    },
+    "language": "Objective-C"
+  },
+  "light-jockey": {
+    "lastFetched": 1778611699334,
+    "stats": {
+      "stars": 16,
+      "commits": 23,
+      "lastPush": "2012-11-26T21:31:59Z",
+      "relevanceScore": 0.25
+    },
+    "language": "Objective-C"
+  },
+  "lumio": {
+    "lastFetched": 1778611700440,
+    "stats": {
+      "stars": 175,
+      "commits": 248,
+      "lastPush": "2016-06-07T00:19:04Z",
+      "relevanceScore": 0.58
+    },
+    "language": "Objective-C"
+  },
+  "sakura-fly": {
+    "lastFetched": 1778611701557,
+    "stats": {
+      "stars": 110,
+      "commits": 53,
+      "lastPush": "2026-04-25T13:58:41Z",
+      "relevanceScore": 7.67
+    },
+    "language": "Objective-C"
+  },
+  "wolfenstein-3d": {
+    "lastFetched": 1778611702506,
+    "stats": {
+      "stars": 537,
+      "commits": 180,
+      "lastPush": "2022-10-14T14:50:42Z",
+      "relevanceScore": 2.54
+    },
+    "language": "C"
+  },
+  "c4bot": {
+    "lastFetched": 1778611703381,
+    "stats": {
+      "stars": 26,
+      "commits": 255,
+      "lastPush": "2018-11-06T14:10:28Z",
+      "relevanceScore": 0.46
+    },
+    "language": "JavaScript"
+  },
+  "aquaria": {
+    "lastFetched": 1778611704545,
+    "stats": {
+      "stars": 320,
+      "commits": 185,
+      "lastPush": "2026-05-05T06:33:57Z",
+      "relevanceScore": 9.64
+    },
+    "language": "C"
+  },
+  "descent-3": {
+    "lastFetched": 1778611705478,
+    "stats": {
+      "stars": 2993,
+      "commits": 360,
+      "lastPush": "2026-01-21T15:12:21Z",
+      "relevanceScore": 12.43
+    },
+    "language": "C++"
+  },
+  "doom-3": {
+    "lastFetched": 1778611706396,
+    "stats": {
+      "stars": 4620,
+      "commits": 92,
+      "lastPush": "2022-05-17T06:13:16Z",
+      "relevanceScore": 2.98
+    },
+    "language": "C++"
+  },
+  "jedi-academy": {
+    "lastFetched": 1778611707309,
+    "stats": {
+      "stars": 524,
+      "commits": 101,
+      "lastPush": "2013-04-04T21:37:28Z",
+      "relevanceScore": 0.61
+    },
+    "language": "C++"
+  },
+  "jedi-outcast": {
+    "lastFetched": 1778611708179,
+    "stats": {
+      "stars": 290,
+      "commits": 103,
+      "lastPush": "2013-04-04T21:51:32Z",
+      "relevanceScore": 0.57
+    },
+    "language": "C++"
+  },
+  "mangos": {
+    "lastFetched": 1778611709191,
+    "stats": {
+      "stars": 3103,
+      "commits": 570,
+      "lastPush": "2026-03-06T06:02:51Z",
+      "relevanceScore": 12.79
+    },
+    "language": null
+  },
+  "miner-wars-2081": {
+    "lastFetched": 1778611710120,
+    "stats": {
+      "stars": 258,
+      "commits": 102,
+      "lastPush": "2013-10-28T15:51:34Z",
+      "relevanceScore": 0.56
+    },
+    "language": "C#"
+  },
+  "openjk": {
+    "lastFetched": 1778611711357,
+    "stats": {
+      "stars": 2200,
+      "commits": 843,
+      "lastPush": "2026-05-12T11:59:57Z",
+      "relevanceScore": 12.7
+    },
+    "language": "C++"
+  },
+  "prince-of-persia": {
+    "lastFetched": 1778611712235,
+    "stats": {
+      "stars": 6770,
+      "commits": 10,
+      "lastPush": "2024-09-27T09:18:47Z",
+      "relevanceScore": 8.15
+    },
+    "language": "Assembly"
+  },
+  "ufo-run": {
+    "lastFetched": 1778611713485,
+    "stats": {
+      "stars": 64,
+      "commits": 2904,
+      "lastPush": "2015-09-21T13:26:34Z",
+      "relevanceScore": 0.62
+    },
+    "language": "C++"
+  },
+  "system-shock": {
+    "lastFetched": 1778611714989,
+    "stats": {
+      "stars": 1464,
+      "commits": 191,
+      "lastPush": "2018-08-03T04:44:01Z",
+      "relevanceScore": 0.7
+    },
+    "language": "C"
+  },
+  "rogue-legacy": {
+    "lastFetched": 1778611715862,
+    "stats": {
+      "stars": 1902,
+      "commits": 10,
+      "lastPush": "2025-04-07T03:36:14Z",
+      "relevanceScore": 7.07
+    },
+    "language": "C#"
+  },
+  "unreal-engine": {
+    "lastFetched": 1778611716796,
+    "stats": {
+      "stars": 3612,
+      "commits": 10,
+      "lastPush": "2024-06-11T03:06:18Z",
+      "relevanceScore": 7.61
+    },
+    "language": null
+  },
+  "akihabara": {
+    "lastFetched": 1778611717745,
+    "stats": {
+      "stars": 199,
+      "commits": 15,
+      "lastPush": "2012-12-12T14:46:49Z",
+      "relevanceScore": 0.4
+    },
+    "language": "JavaScript"
+  },
+  "allegro-5": {
+    "lastFetched": 1778611718671,
+    "stats": {
+      "stars": 2095,
+      "commits": 421,
+      "lastPush": "2026-04-21T08:35:45Z",
+      "relevanceScore": 12.17
+    },
+    "language": "C"
+  },
+  "ammo-js": {
+    "lastFetched": 1778611719551,
+    "stats": {
+      "stars": 4510,
+      "commits": 447,
+      "lastPush": "2024-01-16T16:57:49Z",
+      "relevanceScore": 8.13
+    },
+    "language": "C++"
+  },
+  "atomic-engine": {
+    "lastFetched": 1778611720504,
+    "stats": {
+      "stars": 3439,
+      "commits": 1137,
+      "lastPush": "2024-03-17T05:11:58Z",
+      "relevanceScore": 8.36
+    },
+    "language": "C++"
+  },
+  "bgfx": {
+    "lastFetched": 1778611722342,
+    "stats": {
+      "stars": 17025,
+      "commits": 3210,
+      "lastPush": "2026-05-04T14:54:13Z",
+      "relevanceScore": 15.77
+    },
+    "language": "C"
+  },
+  "chilli-works": {
+    "lastFetched": 1778611723341,
+    "stats": {
+      "stars": 160,
+      "commits": 2822,
+      "lastPush": "2024-04-23T17:53:25Z",
+      "relevanceScore": 6.76
+    },
+    "language": "C++"
+  },
+  "chipmunk-physics": {
+    "lastFetched": 1778611724719,
+    "stats": {
+      "stars": 2390,
+      "commits": 65,
+      "lastPush": "2026-05-05T18:45:27Z",
+      "relevanceScore": 11
+    },
+    "language": "C"
+  },
+  "choicescript": {
+    "lastFetched": 1778611725615,
+    "stats": {
+      "stars": 451,
+      "commits": 173,
+      "lastPush": "2026-03-19T07:56:01Z",
+      "relevanceScore": 9.95
+    },
+    "language": "JavaScript"
+  },
+  "cocos2d-for-android": {
+    "lastFetched": 1778611726501,
+    "stats": {
+      "stars": 600,
+      "commits": 280,
+      "lastPush": "2012-10-16T08:10:03Z",
+      "relevanceScore": 0.66
+    },
+    "language": "Java"
+  },
+  "cocos2d-for-iphone": {
+    "lastFetched": 1778611727639,
+    "stats": {
+      "stars": 4045,
+      "commits": 492,
+      "lastPush": "2021-09-06T07:49:11Z",
+      "relevanceScore": 3.24
+    },
+    "language": "Objective-C"
+  },
+  "cocos2d-for-html5": {
+    "lastFetched": 1778611728572,
+    "stats": {
+      "stars": 3160,
+      "commits": 664,
+      "lastPush": "2024-01-10T07:12:20Z",
+      "relevanceScore": 8.07
+    },
+    "language": "JavaScript"
+  },
+  "cocos2d-x": {
+    "lastFetched": 1778611729497,
+    "stats": {
+      "stars": 19005,
+      "commits": 10513,
+      "lastPush": "2025-05-09T03:36:03Z",
+      "relevanceScore": 13.57
+    },
+    "language": "C++"
+  },
+  "crafty": {
+    "lastFetched": 1778611730442,
+    "stats": {
+      "stars": 3574,
+      "commits": 77,
+      "lastPush": "2023-11-04T15:36:58Z",
+      "relevanceScore": 7.22
+    },
+    "language": "JavaScript"
+  },
+  "cutjavascript": {
+    "lastFetched": 1778611731633,
+    "stats": {
+      "stars": 2555,
+      "commits": 55,
+      "lastPush": "2026-04-07T09:57:40Z",
+      "relevanceScore": 10.96
+    },
+    "language": "TypeScript"
+  },
+  "dash": {
+    "lastFetched": 1778611732576,
+    "stats": {
+      "stars": 424,
+      "commits": 409,
+      "lastPush": "2020-12-18T22:24:39Z",
+      "relevanceScore": 0.66
+    },
+    "language": "D"
+  },
+  "duality": {
+    "lastFetched": 1778611733515,
+    "stats": {
+      "stars": 1427,
+      "commits": 2507,
+      "lastPush": "2025-05-19T07:14:08Z",
+      "relevanceScore": 13.01
+    },
+    "language": "C#"
+  },
+  "entityjavascript": {
+    "lastFetched": 1778611735424,
+    "stats": {
+      "stars": 187,
+      "commits": 25,
+      "lastPush": "2015-09-06T14:51:42Z",
+      "relevanceScore": 0.41
+    },
+    "language": "JavaScript"
+  },
+  "evennia-mud-mu-creation-system": {
+    "lastFetched": 1778611736408,
+    "stats": {
+      "stars": 2043,
+      "commits": 3800,
+      "lastPush": "2026-05-11T18:06:26Z",
+      "relevanceScore": 13.67
+    },
+    "language": "Python"
+  },
+  "flare": {
+    "lastFetched": 1778611737377,
+    "stats": {
+      "stars": 40,
+      "commits": 214,
+      "lastPush": "2018-09-17T20:28:17Z",
+      "relevanceScore": 0.48
+    },
+    "language": "C++"
+  },
+  "flashpunk": {
+    "lastFetched": 1778611738926,
+    "stats": {
+      "stars": 394,
+      "commits": 20,
+      "lastPush": "2016-03-31T05:56:47Z",
+      "relevanceScore": 0.46
+    },
+    "language": "ActionScript"
+  },
+  "flixel": {
+    "lastFetched": 1778611739807,
+    "stats": {
+      "stars": 1141,
+      "commits": 101,
+      "lastPush": "2015-11-05T01:35:36Z",
+      "relevanceScore": 0.66
+    },
+    "language": "ActionScript"
+  },
+  "gamejavascript": {
+    "lastFetched": 1778611740839,
+    "stats": {
+      "stars": 469,
+      "commits": 152,
+      "lastPush": "2020-07-29T12:06:41Z",
+      "relevanceScore": 0.62
+    },
+    "language": "JavaScript"
+  },
+  "gameplay": {
+    "lastFetched": 1778611741784,
+    "stats": {
+      "stars": 4845,
+      "commits": 2125,
+      "lastPush": "2025-02-25T18:58:21Z",
+      "relevanceScore": 11.51
+    },
+    "language": "C++"
+  },
+  "gemrb": {
+    "lastFetched": 1778611742819,
+    "stats": {
+      "stars": 1199,
+      "commits": 903,
+      "lastPush": "2026-05-11T18:26:29Z",
+      "relevanceScore": 12.12
+    },
+    "language": "C++"
+  },
+  "genesisengine": {
+    "lastFetched": 1778611743693,
+    "stats": {
+      "stars": 46,
+      "commits": 80,
+      "lastPush": "2018-12-17T22:40:43Z",
+      "relevanceScore": 0.44
+    },
+    "language": "C#"
+  },
+  "gladiator-3d": {
+    "lastFetched": 1778611744577,
+    "stats": {
+      "stars": 32,
+      "commits": 12,
+      "lastPush": "2014-06-19T13:22:12Z",
+      "relevanceScore": 0.28
+    },
+    "language": "JavaScript"
+  },
+  "godot": {
+    "lastFetched": 1778611746044,
+    "stats": {
+      "stars": 110615,
+      "commits": 18035,
+      "lastPush": "2026-05-12T17:37:46Z",
+      "relevanceScore": 18.91
+    },
+    "language": "C++"
+  },
+  "haxeflixel": {
+    "lastFetched": 1778611746973,
+    "stats": {
+      "stars": 2194,
+      "commits": 913,
+      "lastPush": "2026-05-04T20:26:27Z",
+      "relevanceScore": 12.76
+    },
+    "language": "Haxe"
+  },
+  "ikemen-go": {
+    "lastFetched": 1778611747926,
+    "stats": {
+      "stars": 1349,
+      "commits": 337,
+      "lastPush": "2026-05-10T21:00:02Z",
+      "relevanceScore": 11.56
+    },
+    "language": "Go"
+  },
+  "jigs": {
+    "lastFetched": 1778611749055,
+    "stats": {
+      "stars": 86,
+      "commits": 1740,
+      "lastPush": "2024-08-21T12:49:43Z",
+      "relevanceScore": 7.99
+    },
+    "language": "JavaScript"
+  },
+  "jmonkeyengine": {
+    "lastFetched": 1778611750041,
+    "stats": {
+      "stars": 4193,
+      "commits": 10514,
+      "lastPush": "2026-05-12T15:52:03Z",
+      "relevanceScore": 15.13
+    },
+    "language": "Java"
+  },
+  "kiwi-js": {
+    "lastFetched": 1778611751021,
+    "stats": {
+      "stars": 1458,
+      "commits": 500,
+      "lastPush": "2022-12-31T07:47:52Z",
+      "relevanceScore": 2.98
+    },
+    "language": "JavaScript"
+  },
+  "libgdx": {
+    "lastFetched": 1778611751953,
+    "stats": {
+      "stars": 25080,
+      "commits": 11068,
+      "lastPush": "2026-05-05T23:05:20Z",
+      "relevanceScore": 17.03
+    },
+    "language": "Java"
+  },
+  "librocket": {
+    "lastFetched": 1778611752956,
+    "stats": {
+      "stars": 1178,
+      "commits": 96,
+      "lastPush": "2021-03-26T08:34:22Z",
+      "relevanceScore": 0.66
+    },
+    "language": "C++"
+  },
+  "libsdl2pp": {
+    "lastFetched": 1778611753939,
+    "stats": {
+      "stars": 595,
+      "commits": 12,
+      "lastPush": "2025-03-18T14:01:23Z",
+      "relevanceScore": 6.13
+    },
+    "language": "C++"
+  },
+  "matter-js": {
+    "lastFetched": 1778611754843,
+    "stats": {
+      "stars": 18183,
+      "commits": 229,
+      "lastPush": "2024-08-17T14:14:36Z",
+      "relevanceScore": 11.37
+    },
+    "language": "JavaScript"
+  },
+  "monogame": {
+    "lastFetched": 1778611757345,
+    "stats": {
+      "stars": 13881,
+      "commits": 985,
+      "lastPush": "2026-05-12T18:38:04Z",
+      "relevanceScore": 14.73
+    },
+    "language": "C#"
+  },
+  "oimo-js": {
+    "lastFetched": 1778611758228,
+    "stats": {
+      "stars": 3158,
+      "commits": 318,
+      "lastPush": "2021-07-08T16:40:21Z",
+      "relevanceScore": 3.1
+    },
+    "language": "JavaScript"
+  },
+  "openrts": {
+    "lastFetched": 1778611759146,
+    "stats": {
+      "stars": 1482,
+      "commits": 1909,
+      "lastPush": "2025-09-05T15:59:47Z",
+      "relevanceScore": 12.86
+    },
+    "language": "Java"
+  },
+  "osu-framework": {
+    "lastFetched": 1778611760091,
+    "stats": {
+      "stars": 1949,
+      "commits": 5292,
+      "lastPush": "2026-05-12T17:17:57Z",
+      "relevanceScore": 13.85
+    },
+    "language": "C#"
+  },
+  "oxygine": {
+    "lastFetched": 1778611761074,
+    "stats": {
+      "stars": 812,
+      "commits": 1771,
+      "lastPush": "2024-06-25T13:09:48Z",
+      "relevanceScore": 9.9
+    },
+    "language": "C++"
+  },
+  "panda-js": {
+    "lastFetched": 1778611762458,
+    "stats": {
+      "stars": 761,
+      "commits": 45,
+      "lastPush": "2020-07-25T14:21:44Z",
+      "relevanceScore": 0.6
+    },
+    "language": "JavaScript"
+  },
+  "phaser": {
+    "lastFetched": 1778611763761,
+    "stats": {
+      "stars": 39612,
+      "commits": 4776,
+      "lastPush": "2026-04-30T02:11:46Z",
+      "relevanceScore": 16.92
+    },
+    "language": "JavaScript"
+  },
+  "pixi-js": {
+    "lastFetched": 1778611765805,
+    "stats": {
+      "stars": 47161,
+      "commits": 1364,
+      "lastPush": "2026-05-12T11:20:36Z",
+      "relevanceScore": 16.23
+    },
+    "language": "TypeScript"
+  },
+  "plasma": {
+    "lastFetched": 1778611766771,
+    "stats": {
+      "stars": 231,
+      "commits": 613,
+      "lastPush": "2026-05-08T02:15:08Z",
+      "relevanceScore": 10.14
+    },
+    "language": "C++"
+  },
+  "playcanvas": {
+    "lastFetched": 1778611767717,
+    "stats": {
+      "stars": 15720,
+      "commits": 5618,
+      "lastPush": "2026-05-12T16:58:19Z",
+      "relevanceScore": 16.07
+    },
+    "language": "JavaScript"
+  },
+  "qici-engine": {
+    "lastFetched": 1778611768715,
+    "stats": {
+      "stars": 900,
+      "commits": 3824,
+      "lastPush": "2016-08-08T13:09:54Z",
+      "relevanceScore": 0.8
+    },
+    "language": null
+  },
+  "quasi-engine": {
+    "lastFetched": 1778611769686,
+    "stats": {
+      "stars": 56,
+      "commits": 154,
+      "lastPush": "2015-06-04T02:37:39Z",
+      "relevanceScore": 0.48
+    },
+    "language": "C++"
+  },
+  "ren-py": {
+    "lastFetched": 1778611770664,
+    "stats": {
+      "stars": 6472,
+      "commits": 2284,
+      "lastPush": "2026-05-12T10:20:44Z",
+      "relevanceScore": 14.52
+    },
+    "language": "Ren'Py"
+  },
+  "sfml": {
+    "lastFetched": 1778611772115,
+    "stats": {
+      "stars": 11841,
+      "commits": 1135,
+      "lastPush": "2026-05-12T13:20:32Z",
+      "relevanceScore": 14.66
+    },
+    "language": "C++"
+  },
+  "solarus": {
+    "lastFetched": 1778611773256,
+    "stats": {
+      "stars": 724,
+      "commits": 810,
+      "lastPush": "2018-06-07T15:52:33Z",
+      "relevanceScore": 0.72
+    },
+    "language": "C++"
+  },
+  "spring": {
+    "lastFetched": 1778611774158,
+    "stats": {
+      "stars": 3900,
+      "commits": 1620,
+      "lastPush": "2024-03-31T18:56:50Z",
+      "relevanceScore": 8.6
+    },
+    "language": "C++"
+  },
+  "starling": {
+    "lastFetched": 1778611775148,
+    "stats": {
+      "stars": 3050,
+      "commits": 315,
+      "lastPush": "2026-02-22T21:30:04Z",
+      "relevanceScore": 12.36
+    },
+    "language": "ActionScript"
+  },
+  "tesseract": {
+    "lastFetched": 1778611776034,
+    "stats": {
+      "stars": 193,
+      "commits": 332,
+      "lastPush": "2017-07-16T11:03:14Z",
+      "relevanceScore": 0.6
+    },
+    "language": "C"
+  },
+  "three-js": {
+    "lastFetched": 1778611776929,
+    "stats": {
+      "stars": 112426,
+      "commits": 15966,
+      "lastPush": "2026-05-12T17:01:49Z",
+      "relevanceScore": 18.85
+    },
+    "language": "JavaScript"
+  },
+  "tiled": {
+    "lastFetched": 1778611778117,
+    "stats": {
+      "stars": 12529,
+      "commits": 1043,
+      "lastPush": "2026-05-07T07:01:30Z",
+      "relevanceScore": 14.66
+    },
+    "language": "C++"
+  },
+  "torque-2d": {
+    "lastFetched": 1778611779067,
+    "stats": {
+      "stars": 1576,
+      "commits": 2507,
+      "lastPush": "2026-04-18T21:05:55Z",
+      "relevanceScore": 13.11
+    },
+    "language": "C"
+  },
+  "torque-3d": {
+    "lastFetched": 1778611780059,
+    "stats": {
+      "stars": 3362,
+      "commits": 2040,
+      "lastPush": "2022-04-03T20:16:04Z",
+      "relevanceScore": 3.44
+    },
+    "language": "C++"
+  },
+  "turbulenz-engine": {
+    "lastFetched": 1778611780985,
+    "stats": {
+      "stars": 4957,
+      "commits": 358,
+      "lastPush": "2023-05-28T11:56:21Z",
+      "relevanceScore": 8.1
+    },
+    "language": "TypeScript"
+  },
+  "urho3d": {
+    "lastFetched": 1778611781976,
+    "stats": {
+      "stars": 4732,
+      "commits": 1717,
+      "lastPush": "2023-01-25T17:29:02Z",
+      "relevanceScore": 3.5
+    },
+    "language": "C++"
+  },
+  "wurfel-engine": {
+    "lastFetched": 1778611782889,
+    "stats": {
+      "stars": 117,
+      "commits": 681,
+      "lastPush": "2025-08-16T13:53:29Z",
+      "relevanceScore": 9.51
+    },
+    "language": "Java"
+  },
+  "xle": {
+    "lastFetched": 1778611783844,
+    "stats": {
+      "stars": 336,
+      "commits": 3149,
+      "lastPush": "2022-05-04T00:29:28Z",
+      "relevanceScore": 2.92
+    },
+    "language": "C++"
+  },
+  "bfxr": {
+    "lastFetched": 1778611784747,
+    "stats": {
+      "stars": 1024,
+      "commits": 1010,
+      "lastPush": "2025-04-17T12:18:05Z",
+      "relevanceScore": 9.78
+    },
+    "language": "ActionScript"
+  },
+  "brood-war-api": {
+    "lastFetched": 1778611785714,
+    "stats": {
+      "stars": 1660,
+      "commits": 1528,
+      "lastPush": "2026-05-08T12:12:59Z",
+      "relevanceScore": 12.82
+    },
+    "language": "C++"
+  },
+  "flxcollisions": {
+    "lastFetched": 1778611786768,
+    "stats": {
+      "stars": 2,
+      "commits": 10,
+      "lastPush": "2011-04-27T20:42:46Z",
+      "relevanceScore": 0.12
+    },
+    "language": "ActionScript"
+  },
+  "gamertag": {
+    "lastFetched": 1778611787684,
+    "stats": {
+      "stars": 24,
+      "commits": 10,
+      "lastPush": "2014-01-12T23:58:16Z",
+      "relevanceScore": 0.26
+    },
+    "language": "Ruby"
+  },
+  "greenworks": {
+    "lastFetched": 1778611788626,
+    "stats": {
+      "stars": 1593,
+      "commits": 11,
+      "lastPush": "2025-11-23T20:52:01Z",
+      "relevanceScore": 8.56
+    },
+    "language": "C++"
+  },
+  "halo-reach-api": {
+    "lastFetched": 1778611789572,
+    "stats": {
+      "stars": 18,
+      "commits": 10,
+      "lastPush": "2021-03-11T16:36:58Z",
+      "relevanceScore": 0.24
+    },
+    "language": "Ruby"
+  },
+  "iodinegba": {
+    "lastFetched": 1778611790475,
+    "stats": {
+      "stars": 286,
+      "commits": 10,
+      "lastPush": "2023-08-17T14:28:53Z",
+      "relevanceScore": 4.21
+    },
+    "language": "JavaScript"
+  },
+  "itch": {
+    "lastFetched": 1778611791393,
+    "stats": {
+      "stars": 2715,
+      "commits": 363,
+      "lastPush": "2026-05-12T18:44:48Z",
+      "relevanceScore": 12.34
+    },
+    "language": "TypeScript"
+  },
+  "javascript-breakouts": {
+    "lastFetched": 1778611792272,
+    "stats": {
+      "stars": 543,
+      "commits": 250,
+      "lastPush": "2023-12-13T19:53:00Z",
+      "relevanceScore": 6.5
+    },
+    "language": "JavaScript"
+  },
+  "leaderboard-java": {
+    "lastFetched": 1778611793216,
+    "stats": {
+      "stars": 25,
+      "commits": 10,
+      "lastPush": "2021-03-11T16:12:40Z",
+      "relevanceScore": 0.26
+    },
+    "language": "Java"
+  },
+  "leaderboard-php": {
+    "lastFetched": 1778611794159,
+    "stats": {
+      "stars": 25,
+      "commits": 10,
+      "lastPush": "2021-03-11T15:32:59Z",
+      "relevanceScore": 0.26
+    },
+    "language": "PHP"
+  },
+  "leaderboard-python": {
+    "lastFetched": 1778611795341,
+    "stats": {
+      "stars": 21,
+      "commits": 10,
+      "lastPush": "2021-03-11T15:43:11Z",
+      "relevanceScore": 0.25
+    },
+    "language": "Python"
+  },
+  "leaderboard-ruby": {
+    "lastFetched": 1778611796260,
+    "stats": {
+      "stars": 479,
+      "commits": 10,
+      "lastPush": "2021-03-11T16:13:07Z",
+      "relevanceScore": 0.45
+    },
+    "language": "Ruby"
+  },
+  "leaderboard-scala": {
+    "lastFetched": 1778611797206,
+    "stats": {
+      "stars": 7,
+      "commits": 10,
+      "lastPush": "2021-03-11T15:32:47Z",
+      "relevanceScore": 0.19
+    },
+    "language": "Scala"
+  },
+  "libfreenect": {
+    "lastFetched": 1778611798194,
+    "stats": {
+      "stars": 3793,
+      "commits": 23,
+      "lastPush": "2024-08-05T16:18:04Z",
+      "relevanceScore": 7.88
+    },
+    "language": "C"
+  },
+  "openemu": {
+    "lastFetched": 1778611799126,
+    "stats": {
+      "stars": 17541,
+      "commits": 1952,
+      "lastPush": "2025-10-22T21:39:10Z",
+      "relevanceScore": 15.45
+    },
+    "language": "Swift"
+  },
+  "mudlet": {
+    "lastFetched": 1778611800153,
+    "stats": {
+      "stars": 878,
+      "commits": 2075,
+      "lastPush": "2026-05-12T09:39:51Z",
+      "relevanceScore": 12.37
+    },
+    "language": "C++"
+  },
+  "stats-js": {
+    "lastFetched": 1778611801089,
+    "stats": {
+      "stars": 9116,
+      "commits": 326,
+      "lastPush": "2024-10-11T03:59:02Z",
+      "relevanceScore": 10.99
+    },
+    "language": "JavaScript"
+  },
+  "tassadar": {
+    "lastFetched": 1778611802093,
+    "stats": {
+      "stars": 45,
+      "commits": 10,
+      "lastPush": "2021-03-11T15:40:08Z",
+      "relevanceScore": 0.3
+    },
+    "language": "Ruby"
+  },
+  "world-of-warcraft-api-docs": {
+    "lastFetched": 1778611803115,
+    "stats": {
+      "stars": 533,
+      "commits": 13,
+      "lastPush": "2019-06-21T01:01:06Z",
+      "relevanceScore": 0.47
+    },
+    "language": null
+  }
+}

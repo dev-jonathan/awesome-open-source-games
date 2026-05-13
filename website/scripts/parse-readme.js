@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const README_PATH = path.join(__dirname, '../../README.md');
-const OUTPUT_PATH = path.join(__dirname, '../src/data/games.json');
+const OUTPUT_PATH = path.join(__dirname, '../src/data/final_games.json');
 
 function normalizeString(str) {
   return str.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -16,10 +16,23 @@ function parseReadme() {
     return;
   }
 
+  // Load existing data to perform CRUD instead of simple overwrite
+  let existingGames = [];
+  if (fs.existsSync(OUTPUT_PATH)) {
+    try {
+      existingGames = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8'));
+      console.log(`[INFO] Loaded ${existingGames.length} existing games from final_games.json`);
+    } catch (e) {
+      console.error(`❌ Error parsing existing ${OUTPUT_PATH}:`, e);
+    }
+  }
+
+  const existingGamesMap = new Map(existingGames.map((g) => [g.id, g]));
+
   const content = fs.readFileSync(README_PATH, 'utf-8');
   const lines = content.split('\n');
 
-  const games = [];
+  const newParsedGames = [];
 
   let currentCategory = '';
   let currentSubcategory = '';
@@ -66,11 +79,11 @@ function parseReadme() {
         const name = match[1];
         const id = `company-${name.toLowerCase().replace(/\s+/g, '-')}`;
 
-        const existing = games.find((g) => g.id === id);
+        const existing = newParsedGames.find((g) => g.id === id);
         if (existing) {
           if (!existing.links.includes(match[2])) existing.links.push(match[2]);
         } else {
-          games.push({
+          newParsedGames.push({
             id,
             name,
             link: match[2],
@@ -102,7 +115,7 @@ function parseReadme() {
       const normalizedDesc = normalizeString(description);
 
       // Duplicate check based on highly similar name AND description
-      const existingGame = games.find((g) => {
+      const existingGame = newParsedGames.find((g) => {
         return (
           normalizeString(g.name) === normalizedName &&
           normalizeString(g.description) === normalizedDesc
@@ -124,11 +137,11 @@ function parseReadme() {
         existingGame.tags = Array.from(combinedTags);
       } else {
         // New unique game
-        const countSoFar = games.filter((g) => g._baseName === baseName).length;
+        const countSoFar = newParsedGames.filter((g) => g._baseName === baseName).length;
         const id =
           countSoFar === 0 ? baseName : `${baseName}--${countSoFar + 1}`;
 
-        games.push({
+        newParsedGames.push({
           id,
           _baseName: baseName, // internal, used for collision counting
           name,
@@ -145,17 +158,53 @@ function parseReadme() {
     }
   });
 
-  // Remove internal helper field before saving
-  games.forEach((g) => delete g._baseName);
+  // Remove internal helper field before processing
+  newParsedGames.forEach((g) => delete g._baseName);
+
+  const finalGames = [];
+  const newParsedIds = new Set(newParsedGames.map((g) => g.id));
+
+  // Handle Updates and Creates
+  for (const parsedGame of newParsedGames) {
+    if (existingGamesMap.has(parsedGame.id)) {
+      // UPDATE: Merge existing properties with updated parsed properties
+      const existing = existingGamesMap.get(parsedGame.id);
+      
+      const combinedLinks = new Set([...existing.links, ...parsedGame.links]);
+      const combinedTags = new Set([...existing.tags, ...parsedGame.tags]);
+
+      finalGames.push({
+        ...existing, // Preserves manual entries
+        name: parsedGame.name,
+        link: parsedGame.link, // Update main link to latest from README
+        description: parsedGame.description,
+        category: parsedGame.category,
+        subcategory: parsedGame.subcategory,
+        isAdvanced: parsedGame.isAdvanced,
+        isCompany: parsedGame.isCompany,
+        links: Array.from(combinedLinks),
+        tags: Array.from(combinedTags),
+      });
+    } else {
+      // CREATE: Brand new game
+      finalGames.push(parsedGame);
+    }
+  }
+
+  // Handle Deletes
+  for (const [id, game] of existingGamesMap.entries()) {
+    if (!newParsedIds.has(id)) {
+      console.warn(`[WARN] Game removed from README (Deleted): ${id}`);
+      // By not adding it to finalGames, we perform a hard delete.
+    }
+  }
 
   // Save to Output
   const outputDir = path.dirname(OUTPUT_PATH);
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(games, null, 2), 'utf-8');
-  console.log(
-    `✅ Success: ${games.length} entries exported to ${OUTPUT_PATH}!`,
-  );
+  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(finalGames, null, 2), 'utf-8');
+  console.log(`✅ Success: ${finalGames.length} entries exported to ${OUTPUT_PATH}!`);
 }
 
 parseReadme();
