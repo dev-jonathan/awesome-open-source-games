@@ -11,12 +11,9 @@ const WAVE_SPEED = 0.05;
 const WAVE_FREQUENCY = 4;
 const WAVE_AMPLITUDE = 0.3;
 
-const svgModules = Object.keys(
-  import.meta.glob('/public/svgs/*.svg', { eager: true }),
-);
-const GAME_ICONS: string[] = svgModules.map((path) =>
-  path.replace('/public', ''),
-);
+const envBase = import.meta.env.BASE_URL;
+const baseUrl = envBase.endsWith('/') ? envBase.slice(0, -1) : envBase;
+const BG_URL = baseUrl + '/dither-icons.webp';
 
 export default function App() {
   return (
@@ -39,8 +36,7 @@ export default function App() {
           waveAmplitude={WAVE_AMPLITUDE}
           waveFrequency={WAVE_FREQUENCY}
           waveSpeed={WAVE_SPEED}
-          icons={GAME_ICONS}
-          maxIcons={42}
+          backgroundImageUrl={BG_URL}
         />
       </div>
       <div className="relative z-10 mx-auto w-full">

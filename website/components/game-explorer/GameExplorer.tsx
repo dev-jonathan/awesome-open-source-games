@@ -17,6 +17,16 @@ import gamesData from '../../src/data/final_games.json';
 
 const allGames = gamesData as FinalGame[];
 
+const initialSubcatCounts: Record<string, string[]> = {};
+allGames.forEach((g) => {
+  if (g.category && g.subcategory && !g.isCompany) {
+    if (!initialSubcatCounts[g.category]) initialSubcatCounts[g.category] = [];
+    if (!initialSubcatCounts[g.category].includes(g.subcategory)) {
+      initialSubcatCounts[g.category].push(g.subcategory);
+    }
+  }
+});
+
 const fuse = new Fuse(allGames, {
   keys: [
     { name: 'name', weight: 0.7 },
@@ -43,7 +53,12 @@ export function GameExplorer() {
       cats = [...PRIMARY_CATEGORIES];
     }
 
-    const subcats = subcatsParam ? subcatsParam.split(',') : [];
+    let subcats = subcatsParam ? subcatsParam.split(',') : [];
+    if (!subcatsParam) {
+      cats.forEach((c) => {
+        if (initialSubcatCounts[c]) subcats.push(...initialSubcatCounts[c]);
+      });
+    }
 
     return {
       query: q,
@@ -56,7 +71,9 @@ export function GameExplorer() {
   });
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+  const [isAccordionOpen, setIsAccordionOpen] = useState(() => {
+    return typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+  });
   const [randomSeed, setRandomSeed] = useState(() => Math.random());
   const [selectedGame, setSelectedGame] = useState<FinalGame | null>(null);
 
@@ -144,13 +161,12 @@ export function GameExplorer() {
         return [];
       }
 
-      // Filter by Subcategories if any are selected
-      if (filterState.subcategories.length > 0) {
-        result = result.filter(
-          (g) =>
-            g.subcategory && filterState.subcategories.includes(g.subcategory),
-        );
-      }
+      // Filter by Subcategories
+      // Games without subcategories are always included if their category is active.
+      result = result.filter(
+        (g) =>
+          !g.subcategory || filterState.subcategories.includes(g.subcategory),
+      );
     }
 
     result = [...result];
@@ -196,17 +212,68 @@ export function GameExplorer() {
 
       // If we uncheck a category, also uncheck its subcategories
       let newSubcats = prev.subcategories;
+      const subcatsForThisCat = initialSubcatCounts[cat] || [];
+
       if (isActive) {
-        const subcatsForThisCat = Object.keys(subcategoryCounts[cat] || {});
         newSubcats = prev.subcategories.filter(
           (s) => !subcatsForThisCat.includes(s),
         );
+      } else {
+        const toAdd = subcatsForThisCat.filter(
+          (s) => !prev.subcategories.includes(s),
+        );
+        newSubcats = [...prev.subcategories, ...toAdd];
       }
 
       return {
         ...prev,
         categories: isPrimary ? newList : prev.categories,
         advancedCategories: isPrimary ? prev.advancedCategories : newList,
+        subcategories: newSubcats,
+      };
+    });
+  };
+
+  const toggleAllSubcategories = (cat: string, isAllChecked: boolean) => {
+    setFilterState((prev) => {
+      const subcatsForThisCat = initialSubcatCounts[cat] || [];
+      let newSubcats = prev.subcategories;
+      let newCategories = prev.categories;
+      let newAdvancedCategories = prev.advancedCategories;
+
+      if (isAllChecked) {
+        newSubcats = prev.subcategories.filter(
+          (s) => !subcatsForThisCat.includes(s),
+        );
+        if (PRIMARY_CATEGORIES.includes(cat)) {
+          newCategories = prev.categories.filter((c) => c !== cat);
+        } else {
+          newAdvancedCategories = prev.advancedCategories.filter(
+            (c) => c !== cat,
+          );
+        }
+      } else {
+        const toAdd = subcatsForThisCat.filter(
+          (s) => !prev.subcategories.includes(s),
+        );
+        newSubcats = [...prev.subcategories, ...toAdd];
+        if (
+          PRIMARY_CATEGORIES.includes(cat) &&
+          !prev.categories.includes(cat)
+        ) {
+          newCategories = [...prev.categories, cat];
+        } else if (
+          !PRIMARY_CATEGORIES.includes(cat) &&
+          !prev.advancedCategories.includes(cat)
+        ) {
+          newAdvancedCategories = [...prev.advancedCategories, cat];
+        }
+      }
+
+      return {
+        ...prev,
+        categories: newCategories,
+        advancedCategories: newAdvancedCategories,
         subcategories: newSubcats,
       };
     });
@@ -219,19 +286,37 @@ export function GameExplorer() {
         ? prev.subcategories.filter((c) => c !== sub)
         : [...prev.subcategories, sub];
 
-      // UX Improvement: If sub is being activated and parentCat is NOT active, activate parentCat
-      const isParentActive =
-        prev.categories.includes(parentCat) ||
-        prev.advancedCategories.includes(parentCat);
-
       let newCategories = prev.categories;
       let newAdvancedCategories = prev.advancedCategories;
 
-      if (!isSubActive && !isParentActive) {
-        if (PRIMARY_CATEGORIES.includes(parentCat)) {
-          newCategories = [...prev.categories, parentCat];
-        } else {
-          newAdvancedCategories = [...prev.advancedCategories, parentCat];
+      if (!isSubActive) {
+        // UX Improvement: If sub is being activated and parentCat is NOT active, activate parentCat
+        const isParentActive =
+          prev.categories.includes(parentCat) ||
+          prev.advancedCategories.includes(parentCat);
+
+        if (!isParentActive) {
+          if (PRIMARY_CATEGORIES.includes(parentCat)) {
+            newCategories = [...prev.categories, parentCat];
+          } else {
+            newAdvancedCategories = [...prev.advancedCategories, parentCat];
+          }
+        }
+      } else {
+        // Subcategory is being DEACTIVATED.
+        // If this was the LAST subcategory of this parentCat, deactivate the parentCat too
+        const subcatsForThisCat = initialSubcatCounts[parentCat] || [];
+        const remainingSubcatsForParent = subcatsForThisCat.filter((s) =>
+          newSubcats.includes(s),
+        );
+        if (remainingSubcatsForParent.length === 0) {
+          if (PRIMARY_CATEGORIES.includes(parentCat)) {
+            newCategories = prev.categories.filter((c) => c !== parentCat);
+          } else {
+            newAdvancedCategories = prev.advancedCategories.filter(
+              (c) => c !== parentCat,
+            );
+          }
         }
       }
 
@@ -271,9 +356,9 @@ export function GameExplorer() {
                 ...filterState.advancedCategories,
               ]}
               onToggle={toggleCategory}
-              onOpenAdvanced={() => setIsDrawerOpen(true)}
               onToggleAdvanced2={() => setIsAccordionOpen(!isAccordionOpen)}
               isAdvancedOpen={isAccordionOpen}
+              resultCount={visibleGames.length}
             />
           </div>
           <SearchBar initialValue={filterState.query} onSearch={handleSearch} />
@@ -286,6 +371,7 @@ export function GameExplorer() {
           filterState={filterState}
           onToggleCategory={toggleCategory}
           onToggleSubcategory={toggleSubcategory}
+          onToggleAllSubcategories={toggleAllSubcategories}
           onChangeSort={handleSortChange}
         />
       </div>

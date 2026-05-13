@@ -13,6 +13,7 @@ export function AdvancedAccordion({
   filterState,
   onToggleCategory,
   onToggleSubcategory,
+  onToggleAllSubcategories,
   onChangeSort,
 }: {
   isOpen: boolean;
@@ -22,9 +23,12 @@ export function AdvancedAccordion({
   filterState: FilterState;
   onToggleCategory: (cat: string) => void;
   onToggleSubcategory: (sub: string, parentCat: string) => void;
+  onToggleAllSubcategories: (cat: string, isAllChecked: boolean) => void;
   onChangeSort: (sort: SortOption) => void;
 }) {
-  const [expandedCats, setExpandedCats] = useState<string[]>([]);
+  const [expandedCats, setExpandedCats] = useState<string[]>(() => {
+    return ['Mobile Games'];
+  });
 
   if (!isOpen) return null;
 
@@ -49,7 +53,7 @@ export function AdvancedAccordion({
                   key={s}
                   variant={filterState.sortBy === s ? 'default' : 'outline'}
                   onClick={() => onChangeSort(s)}
-                  className={`rounded-none px-4 py-2 border text-center transition-all h-auto ${
+                  className={`cursor-pointer rounded-none px-4 py-2 border text-center transition-all h-auto ${
                     filterState.sortBy === s
                       ? 'bg-indigo-500/20 border-indigo-500 text-white font-medium hover:bg-indigo-500/30'
                       : 'bg-black/20 border-white/10 hover:border-white/30 text-white/70 hover:text-white'
@@ -96,7 +100,7 @@ export function AdvancedAccordion({
                     >
                       <button
                         onClick={() => onToggleCategory(cat)}
-                        className="flex items-center gap-3 flex-1 text-left"
+                        className="cursor-pointer flex items-center gap-3 flex-1 text-left"
                       >
                         <span
                           className={`w-4 h-4 flex items-center justify-center border ${active ? 'bg-indigo-500 border-indigo-500' : 'border-white/30'}`}
@@ -116,7 +120,7 @@ export function AdvancedAccordion({
                           variant="ghost"
                           size="icon"
                           onClick={() => toggleExpand(cat)}
-                          className="h-8 w-8 hover:bg-white/10 transition-colors rounded-none"
+                          className="cursor-pointer h-8 w-8 bg-white/5 hover:bg-white/20 text-white/70 hover:text-white transition-all duration-200 rounded-none shadow-sm"
                         >
                           {isExpanded ? (
                             <ChevronDown className="w-4 h-4" />
@@ -130,6 +134,22 @@ export function AdvancedAccordion({
                     {/* Subcategories */}
                     {isExpanded && hasSubs && (
                       <div className="ml-6 pl-4 border-l border-white/5 space-y-1 mt-1 pb-2">
+                        <div className="flex justify-end pr-3 py-1">
+                          <button
+                            onClick={() => {
+                              const subcatKeys = Object.keys(subs);
+                              const allChecked = subcatKeys.every(s => filterState.subcategories.includes(s));
+                              onToggleAllSubcategories(cat, allChecked);
+                            }}
+                            className="cursor-pointer text-[10px] text-white/50 hover:text-white underline"
+                          >
+                            {(() => {
+                              const subcatKeys = Object.keys(subs);
+                              const allChecked = subcatKeys.every(s => filterState.subcategories.includes(s));
+                              return allChecked ? 'Uncheck all' : 'Check all';
+                            })()}
+                          </button>
+                        </div>
                         {Object.entries(subs)
                           .sort((a, b) => b[1] - a[1])
                           .map(([sub, subCount]) => {
@@ -139,7 +159,7 @@ export function AdvancedAccordion({
                               <button
                                 key={sub}
                                 onClick={() => onToggleSubcategory(sub, cat)}
-                                className={`w-full flex items-center justify-between px-3 py-1.5 transition-colors border ${
+                                className={`cursor-pointer w-full flex items-center justify-between px-3 py-1.5 transition-colors border ${
                                   subActive
                                     ? 'bg-indigo-500/10 border-indigo-500/30 text-white'
                                     : 'bg-transparent border-transparent hover:bg-white/5 text-white/50 hover:text-white/80'

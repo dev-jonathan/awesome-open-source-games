@@ -30,7 +30,8 @@ export function GameModal({
 }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [prevGameId, setPrevGameId] = useState<string | null>(null);
-  const baseUrl = import.meta.env.VITE_IMAGE_BASE_URL || '';
+  const envBase = import.meta.env.BASE_URL;
+  const baseUrl = import.meta.env.VITE_IMAGE_BASE_URL || (envBase.endsWith('/') ? envBase.slice(0, -1) : envBase);
 
   // Reset image index immediately when game changes
   if (game?.id !== prevGameId) {

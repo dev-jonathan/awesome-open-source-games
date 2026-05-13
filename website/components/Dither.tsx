@@ -26,6 +26,7 @@ uniform float uMouseRadius;
 uniform float uColorNum;
 uniform float uPixelSize;
 uniform sampler2D uIconTexture;
+uniform vec2 uImageResolution;
 uniform int uHasIcons;
 
 out vec4 fragColor;
@@ -135,7 +136,12 @@ void main() {
   col = dither(gl_FragCoord.xy, col);
 
   if (uHasIcons == 1) {
-    vec2 texCoord = gl_FragCoord.xy / uResolution;
+    vec2 rs = uResolution;
+    vec2 is = uImageResolution;
+    float scale = max(rs.x / max(is.x, 1.0), rs.y / max(is.y, 1.0));
+    vec2 coverSize = is * scale;
+    vec2 offset = (coverSize - rs) / 2.0;
+    vec2 texCoord = (gl_FragCoord.xy + offset) / coverSize;
     texCoord.y = 1.0 - texCoord.y;
     vec4 iconColor = texture(uIconTexture, texCoord);
     
@@ -207,8 +213,7 @@ interface DitherProps {
   disableAnimation?: boolean;
   enableMouseInteraction?: boolean;
   mouseRadius?: number;
-  icons?: string[];
-  maxIcons?: number;
+  backgroundImageUrl?: string;
 }
 
 export default function Dither({
@@ -221,8 +226,7 @@ export default function Dither({
   disableAnimation = false,
   enableMouseInteraction = true,
   mouseRadius = 1,
-  icons,
-  maxIcons = 12,
+  backgroundImageUrl,
 }: DitherProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -233,60 +237,18 @@ export default function Dither({
   const loadedIconsRef = useRef(false);
 
   useEffect(() => {
-    if (!icons || icons.length === 0) return;
+    if (!backgroundImageUrl) return;
 
-    // Distribute 42 icons in the right 60% (left 40% free)
-    const num = Math.min(icons.length, maxIcons || icons.length);
-    const instances = [];
-
-    const cols = 6;
-    const rows = 7;
-    const xStart = 48; // Começa em 48% da largura (shift right)
-    const availableWidth = 47; // Ocupa até ~95%
-    const cellWidth = availableWidth / cols;
-    const cellHeight = 85 / rows;
-
-    for (let i = 0; i < num; i++) {
-      const row = Math.floor(i / cols);
-      const col = i % cols;
-
-      const xBase = xStart + col * cellWidth;
-      const yBase = 5 + row * cellHeight;
-
-      // Minor jitter to prevent overlap in tight spaces
-      const xJitter = (Math.random() - 0.5) * cellWidth * 0.5;
-      const yJitter = (Math.random() - 0.5) * cellHeight * 0.5;
-
-      const xPercent = xBase + xJitter;
-      const yPercent = yBase + yJitter;
-      const scale = 0.45 + Math.random() * 0.35;
-      const rotation = (Math.random() - 0.5) * 35;
-
-      instances.push({
-        iconIndex: i % icons.length,
-        xPercent,
-        yPercent,
-        scale,
-        rotation,
-      });
-    }
-    iconInstancesRef.current = instances;
-
-    const loadImages = async () => {
-      const promises = icons.map((src) => {
-        return new Promise<HTMLImageElement>((resolve) => {
-          const img = new Image();
-          img.onload = () => resolve(img);
-          img.onerror = () => resolve(img);
-          img.src = src;
-        });
-      });
-      const imgs = await Promise.all(promises);
-      iconImagesRef.current = imgs;
+    const img = new Image();
+    img.onload = () => {
+      iconImagesRef.current = [img];
       loadedIconsRef.current = true;
     };
-    loadImages();
-  }, [icons, maxIcons]);
+    img.onerror = () => {
+      console.error('Failed to load dither background image');
+    };
+    img.src = backgroundImageUrl;
+  }, [backgroundImageUrl]);
 
   // Store mutable props in refs to avoid re-running the heavy effect
   const propsRef = useRef({
@@ -357,6 +319,7 @@ export default function Dither({
       colorNum: gl.getUniformLocation(program, 'uColorNum'),
       pixelSize: gl.getUniformLocation(program, 'uPixelSize'),
       iconTexture: gl.getUniformLocation(program, 'uIconTexture'),
+      imageResolution: gl.getUniformLocation(program, 'uImageResolution'),
       hasIcons: gl.getUniformLocation(program, 'uHasIcons'),
     };
 
@@ -415,9 +378,6 @@ export default function Dither({
     let animId = 0;
     let startTime = performance.now();
 
-    let isRenderingIcons = false;
-    let renderIconIndex = 0;
-
     const render = () => {
       if (loadedIconsRef.current && !iconsWereLoaded) {
         iconsWereLoaded = true;
@@ -425,74 +385,19 @@ export default function Dither({
       }
 
       if (needsTextureUpdate && iconsWereLoaded) {
-        if (!offscreenCanvasRef.current) {
-          offscreenCanvasRef.current = document.createElement('canvas');
+        const img = iconImagesRef.current[0];
+        if (img) {
+          gl.bindTexture(gl.TEXTURE_2D, iconTexture);
+          gl.texImage2D(
+            gl.TEXTURE_2D,
+            0,
+            gl.RGBA,
+            gl.RGBA,
+            gl.UNSIGNED_BYTE,
+            img,
+          );
         }
-        const off = offscreenCanvasRef.current;
-        if (off.width !== width || off.height !== height) {
-          off.width = width;
-          off.height = height;
-        }
-        const ctx = off.getContext('2d', { willReadFrequently: true });
-        if (ctx) {
-          if (!isRenderingIcons) {
-            ctx.clearRect(0, 0, width, height);
-            isRenderingIcons = true;
-            renderIconIndex = 0;
-          }
-
-          if (width >= 1024) {
-            // Apply white to SVGs and a neon glow matching the exact title color (rgba 119, 139, 253)
-            ctx.filter = 'brightness(0) invert(1)';
-            ctx.shadowColor = 'rgba(119, 139, 253, 1)';
-            ctx.shadowBlur = 15;
-            ctx.shadowOffsetX = 0;
-            ctx.shadowOffsetY = 0;
-
-            const baseSize = 45;
-            let iconsRenderedThisFrame = 0;
-
-            // Render up to 4 icons per frame to avoid locking the main thread
-            while (
-              renderIconIndex < iconInstancesRef.current.length &&
-              iconsRenderedThisFrame < 4
-            ) {
-              const inst = iconInstancesRef.current[renderIconIndex];
-              const img = iconImagesRef.current[inst.iconIndex];
-              if (img && img.width > 0) {
-                const x = (inst.xPercent / 100) * width;
-                const y = (inst.yPercent / 100) * height;
-                const size = baseSize * inst.scale;
-                ctx.save();
-                ctx.translate(x, y);
-                ctx.rotate((inst.rotation * Math.PI) / 180);
-                ctx.drawImage(img, -size / 2, -size / 2, size, size);
-                ctx.restore();
-              }
-              renderIconIndex++;
-              iconsRenderedThisFrame++;
-            }
-          } else {
-            // Skip icons on smaller screens
-            renderIconIndex = iconInstancesRef.current.length;
-          }
-
-          if (renderIconIndex >= iconInstancesRef.current.length) {
-            gl.bindTexture(gl.TEXTURE_2D, iconTexture);
-            gl.texImage2D(
-              gl.TEXTURE_2D,
-              0,
-              gl.RGBA,
-              gl.RGBA,
-              gl.UNSIGNED_BYTE,
-              off,
-            );
-            needsTextureUpdate = false;
-            isRenderingIcons = false;
-          }
-        } else {
-          needsTextureUpdate = false;
-        }
+        needsTextureUpdate = false;
       }
 
       const p = propsRef.current;
@@ -520,6 +425,14 @@ export default function Dither({
       gl.activeTexture(gl.TEXTURE0);
       gl.bindTexture(gl.TEXTURE_2D, iconTexture);
       gl.uniform1i(loc.iconTexture, 0);
+      
+      const img = iconImagesRef.current[0];
+      if (img && img.width > 0) {
+        gl.uniform2f(loc.imageResolution, img.width, img.height);
+      } else {
+        gl.uniform2f(loc.imageResolution, 1.0, 1.0);
+      }
+      
       gl.uniform1i(loc.hasIcons, iconsWereLoaded ? 1 : 0);
 
       gl.drawArrays(gl.TRIANGLES, 0, 3);
@@ -536,7 +449,7 @@ export default function Dither({
       gl.deleteProgram(program);
       gl.deleteTexture(iconTexture);
     };
-  }, [icons, maxIcons]); // Dependencies match hooks used from variables
+  }, [backgroundImageUrl]); // Dependencies match hooks used from variables
 
   return (
     <canvas

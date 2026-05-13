@@ -12,7 +12,8 @@ export function GameCard({
   game: FinalGame;
   onClick: () => void;
 }) {
-  const baseUrl = import.meta.env.VITE_IMAGE_BASE_URL || '';
+  const envBase = import.meta.env.BASE_URL;
+  const baseUrl = import.meta.env.VITE_IMAGE_BASE_URL || (envBase.endsWith('/') ? envBase.slice(0, -1) : envBase);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isPreviewActive, setIsPreviewActive] = useState(false);
@@ -73,7 +74,6 @@ export function GameCard({
                 src={`${baseUrl}${images[0]}`}
                 layout="fullWidth"
                 alt={game.name}
-                cdn={baseUrl ? 'cloudflare' : undefined}
                 className="w-full h-auto block"
               />
             </div>
@@ -93,9 +93,8 @@ export function GameCard({
                   <Image
                     src={`${baseUrl}${img}`}
                     layout="fullWidth"
-                    alt={`${game.name} preview ${actualIdx + 1}`}
-                    cdn={baseUrl ? 'cloudflare' : undefined}
-                    className="w-full h-full object-cover"
+                alt={`${game.name} preview ${actualIdx + 1}`}
+                className="w-full h-full object-cover"
                   />
                 </div>
               );
