@@ -13,7 +13,6 @@ import {
   Github,
 } from 'lucide-react';
 
-import { Image } from '@unpic/react';
 import { useState, useEffect } from 'react';
 import { formatCategory } from '@/lib/utils';
 import { formatStars } from './GameCardFallback';
@@ -30,8 +29,6 @@ export function GameModal({
 }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [prevGameId, setPrevGameId] = useState<string | null>(null);
-  const envBase = import.meta.env.BASE_URL;
-  const baseUrl = import.meta.env.VITE_IMAGE_BASE_URL || (envBase.endsWith('/') ? envBase.slice(0, -1) : envBase);
 
   // Reset image index immediately when game changes
   if (game?.id !== prevGameId) {
@@ -124,13 +121,13 @@ export function GameModal({
           <div className="flex-1 relative flex items-center justify-center p-4 group bg-[#050505]">
             {hasImages ? (
               <>
-                <Image
-                  src={`${baseUrl}${images[activeImageIndex]}`}
-                  layout="constrained"
+                <img
+                  src={images[activeImageIndex]}
                   width={1200}
                   height={900}
                   alt={game.name}
                   loading="eager"
+                  fetchPriority="high"
                   className="max-w-full max-h-full object-contain shadow-2xl"
                 />
 
@@ -180,8 +177,10 @@ export function GameModal({
                     }`}
                   >
                     <img
-                      src={`${baseUrl}${img}`}
+                      src={img}
                       alt={`Thumbnail ${idx + 1}`}
+                      loading="lazy"
+                      fetchPriority="low"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                   </button>

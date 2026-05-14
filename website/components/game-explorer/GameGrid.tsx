@@ -30,11 +30,22 @@ export function GameGrid({
     );
   }
 
-  // Render left-to-right horizontally by dealing cards into columns
-  const columnsItems: FinalGame[][] = Array.from({ length: cols }, () => []);
+  // Distribute games into columns in ROW-FIRST order so the browser
+  // fetches images in the same order the user sees them (left→right, top→bottom).
+  // e.g. with 4 cols: game[0]→col0, game[1]→col1, game[2]→col2, game[3]→col3
+  //                    game[4]→col0, game[5]→col1 ...  (same as before visually)
+  // The key fix is that we assign a global `index` per card so GameCard
+  // knows whether to eager-load (first 2 rows visible ≈ cols*2 cards).
+  const columnsItems: { game: FinalGame; globalIndex: number }[][] = Array.from(
+    { length: cols },
+    () => [],
+  );
   games.forEach((game, i) => {
-    columnsItems[i % cols].push(game);
+    columnsItems[i % cols].push({ game, globalIndex: i });
   });
+
+  // First 2 rows across all columns are considered "above the fold"
+  const aboveFoldCount = cols * 2;
 
   return (
     <div
@@ -44,8 +55,13 @@ export function GameGrid({
     >
       {columnsItems.map((col, colIdx) => (
         <div key={colIdx} className="flex flex-col gap-4">
-          {col.map((g) => (
-            <GameCard key={g.id} game={g} onClick={() => onGameClick(g)} />
+          {col.map(({ game, globalIndex }) => (
+            <GameCard
+              key={game.id}
+              game={game}
+              priority={globalIndex < aboveFoldCount}
+              onClick={() => onGameClick(game)}
+            />
           ))}
         </div>
       ))}

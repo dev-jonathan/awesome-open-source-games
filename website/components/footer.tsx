@@ -73,7 +73,6 @@ export default function FooterSection() {
               {[
                 { name: 'Shadcn UI', url: 'https://github.com/shadcn-ui/ui' },
                 { name: 'React', url: 'https://github.com/facebook/react' },
-                { name: 'Unpic', url: 'https://github.com/ascorbic/unpic-img' },
                 { name: 'Vite', url: 'https://github.com/vitejs/vite' },
                 { name: 'Fuse.js', url: 'https://github.com/krisk/Fuse' },
                 {

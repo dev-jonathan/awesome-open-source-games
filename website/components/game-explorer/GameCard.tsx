@@ -1,4 +1,3 @@
-import { Image } from '@unpic/react';
 import { Star } from 'lucide-react';
 import { FinalGame } from './types';
 import { GameCardFallback, formatStars } from './GameCardFallback';
@@ -8,12 +7,13 @@ import { formatCategory } from '@/lib/utils';
 export function GameCard({
   game,
   onClick,
+  priority = false,
 }: {
   game: FinalGame;
   onClick: () => void;
+  /** True for cards in the first ~2 rows — triggers eager load + high fetchpriority */
+  priority?: boolean;
 }) {
-  const envBase = import.meta.env.BASE_URL;
-  const baseUrl = import.meta.env.VITE_IMAGE_BASE_URL || (envBase.endsWith('/') ? envBase.slice(0, -1) : envBase);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isPreviewActive, setIsPreviewActive] = useState(false);
@@ -33,7 +33,7 @@ export function GameCard({
     if (isHovering && hasMultipleImages) {
       hoverTimerRef.current = setTimeout(() => {
         setIsPreviewActive(true);
-      }, 300); // Faster preview start
+      }, 300);
     } else {
       if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
       setIsPreviewActive(false);
@@ -49,7 +49,7 @@ export function GameCard({
     if (isPreviewActive && hasMultipleImages) {
       interval = setInterval(() => {
         setCurrentImageIndex((prev) => (prev + 1) % images.length);
-      }, 1000); // Faster image rotation
+      }, 1000);
     }
     return () => {
       if (interval) clearInterval(interval);
@@ -66,19 +66,21 @@ export function GameCard({
       <div className="relative overflow-hidden rounded-none ring-1 ring-white/10 group-hover:ring-white/30 transition-all bg-slate-900/50 h-full">
         {game.hasImage && images.length > 0 ? (
           <div className="relative w-full h-full overflow-hidden">
-            {/* The first image is relative to maintain the card's natural height in masonry */}
+            {/* First image — maintains card height in masonry */}
             <div
               className={`relative w-full h-full transition-opacity duration-700 ease-in-out ${currentImageIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
             >
-              <Image
-                src={`${baseUrl}${images[0]}`}
-                layout="fullWidth"
+              <img
+                src={images[0]}
                 alt={game.name}
+                loading={priority ? 'eager' : 'lazy'}
+                fetchPriority={priority ? 'high' : 'low'}
+                decoding={priority ? 'sync' : 'async'}
                 className="w-full h-auto block"
               />
             </div>
 
-            {/* Other images are absolute overlays */}
+            {/* Secondary images — absolute overlays, always lazy */}
             {images.slice(1).map((img, idx) => {
               const actualIdx = idx + 1;
               return (
@@ -90,11 +92,13 @@ export function GameCard({
                       : 'opacity-0 z-0'
                   }`}
                 >
-                  <Image
-                    src={`${baseUrl}${img}`}
-                    layout="fullWidth"
-                alt={`${game.name} preview ${actualIdx + 1}`}
-                className="w-full h-full object-cover"
+                  <img
+                    src={img}
+                    loading="lazy"
+                    fetchPriority="low"
+                    decoding="async"
+                    alt={`${game.name} preview ${actualIdx + 1}`}
+                    className="w-full h-full object-cover"
                   />
                 </div>
               );

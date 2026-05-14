@@ -45,8 +45,6 @@ jobs:
       - name: Build
         working-directory: ./website
         run: pnpm run build
-        env:
-          VITE_IMAGE_BASE_URL: "https://cdn.jsdelivr.net/gh/${{ github.repository }}@assets"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
