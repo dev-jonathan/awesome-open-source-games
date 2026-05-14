@@ -21,6 +21,7 @@ export function GameCard({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isPreviewActive, setIsPreviewActive] = useState(false);
+  const [imgError, setImgError] = useState(false);
   const hoverTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const images = game.images || [];
@@ -68,7 +69,7 @@ export function GameCard({
       onMouseLeave={() => setIsHovering(false)}
     >
       <div className="relative overflow-hidden rounded-none ring-1 ring-white/10 group-hover:ring-white/30 transition-all bg-slate-900/50 h-full">
-        {game.hasImage && images.length > 0 ? (
+        {game.hasImage && images.length > 0 && !imgError ? (
           <div className="relative w-full h-full overflow-hidden">
             {/* First image — drives the card's natural height */}
             <div
@@ -81,6 +82,7 @@ export function GameCard({
                 fetchPriority={priority ? 'high' : 'auto'}
                 decoding={priority ? 'sync' : 'async'}
                 className="w-full h-auto block"
+                onError={() => setImgError(true)}
               />
             </div>
 
