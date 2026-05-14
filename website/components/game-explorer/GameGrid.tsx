@@ -30,21 +30,18 @@ export function GameGrid({
     );
   }
 
-  // Distribute games into columns in ROW-FIRST order so the browser
-  // fetches images in the same order the user sees them (left→right, top→bottom).
-  // e.g. with 4 cols: game[0]→col0, game[1]→col1, game[2]→col2, game[3]→col3
-  //                    game[4]→col0, game[5]→col1 ...  (same as before visually)
-  // The key fix is that we assign a global `index` per card so GameCard
-  // knows whether to eager-load (first 2 rows visible ≈ cols*2 cards).
-  const columnsItems: { game: FinalGame; globalIndex: number }[][] = Array.from(
+  // Distribute row-first (i % cols) so visual row 0 = games[0..cols-1] (correct sort order).
+  // e.g. cols=4: col0=[0,4,8..], col1=[1,5,9..], col2=[2,6,10..], col3=[3,7,11..]
+  const columnsItems: { game: FinalGame; index: number }[][] = Array.from(
     { length: cols },
     () => [],
   );
   games.forEach((game, i) => {
-    columnsItems[i % cols].push({ game, globalIndex: i });
+    columnsItems[i % cols].push({ game, index: i });
   });
 
-  // First 2 rows across all columns are considered "above the fold"
+  // The first two visual rows = indices 0..(cols*2 - 1). Mark those as priority
+  // so the browser fetches their images with high priority regardless of DOM position.
   const aboveFoldCount = cols * 2;
 
   return (
@@ -55,12 +52,12 @@ export function GameGrid({
     >
       {columnsItems.map((col, colIdx) => (
         <div key={colIdx} className="flex flex-col gap-4">
-          {col.map(({ game, globalIndex }) => (
+          {col.map(({ game, index }) => (
             <GameCard
               key={game.id}
               game={game}
-              priority={globalIndex < aboveFoldCount}
               onClick={() => onGameClick(game)}
+              priority={index < aboveFoldCount}
             />
           ))}
         </div>

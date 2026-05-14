@@ -18,6 +18,11 @@ import { formatCategory } from '@/lib/utils';
 import { formatStars } from './GameCardFallback';
 import { Button } from '@/components/ui/button';
 
+const envBase = import.meta.env.BASE_URL;
+const baseUrl =
+  import.meta.env.VITE_IMAGE_BASE_URL ||
+  (envBase.endsWith('/') ? envBase.slice(0, -1) : envBase);
+
 export function GameModal({
   game,
   isOpen,
@@ -122,7 +127,7 @@ export function GameModal({
             {hasImages ? (
               <>
                 <img
-                  src={images[activeImageIndex]}
+                  src={`${baseUrl}${images[activeImageIndex]}`}
                   width={1200}
                   height={900}
                   alt={game.name}
@@ -177,7 +182,7 @@ export function GameModal({
                     }`}
                   >
                     <img
-                      src={img}
+                      src={`${baseUrl}${img}`}
                       alt={`Thumbnail ${idx + 1}`}
                       loading="lazy"
                       fetchPriority="low"

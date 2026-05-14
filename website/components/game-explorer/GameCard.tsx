@@ -11,9 +11,13 @@ export function GameCard({
 }: {
   game: FinalGame;
   onClick: () => void;
-  /** True for cards in the first ~2 rows — triggers eager load + high fetchpriority */
   priority?: boolean;
 }) {
+  const envBase = import.meta.env.BASE_URL;
+  const baseUrl =
+    import.meta.env.VITE_IMAGE_BASE_URL ||
+    (envBase.endsWith('/') ? envBase.slice(0, -1) : envBase);
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isPreviewActive, setIsPreviewActive] = useState(false);
@@ -66,21 +70,21 @@ export function GameCard({
       <div className="relative overflow-hidden rounded-none ring-1 ring-white/10 group-hover:ring-white/30 transition-all bg-slate-900/50 h-full">
         {game.hasImage && images.length > 0 ? (
           <div className="relative w-full h-full overflow-hidden">
-            {/* First image — maintains card height in masonry */}
+            {/* First image — drives the card's natural height */}
             <div
-              className={`relative w-full h-full transition-opacity duration-700 ease-in-out ${currentImageIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
+              className={`relative w-full transition-opacity duration-700 ease-in-out ${currentImageIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
             >
               <img
-                src={images[0]}
+                src={`${baseUrl}${images[0]}`}
                 alt={game.name}
                 loading={priority ? 'eager' : 'lazy'}
-                fetchPriority={priority ? 'high' : 'low'}
+                fetchPriority={priority ? 'high' : 'auto'}
                 decoding={priority ? 'sync' : 'async'}
                 className="w-full h-auto block"
               />
             </div>
 
-            {/* Secondary images — absolute overlays, always lazy */}
+            {/* Subsequent images as absolute overlays */}
             {images.slice(1).map((img, idx) => {
               const actualIdx = idx + 1;
               return (
@@ -93,18 +97,17 @@ export function GameCard({
                   }`}
                 >
                   <img
-                    src={img}
-                    loading="lazy"
-                    fetchPriority="low"
-                    decoding="async"
+                    src={`${baseUrl}${img}`}
                     alt={`${game.name} preview ${actualIdx + 1}`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
               );
             })}
 
-            {/* Subtle progress indicators */}
+            {/* Progress dots */}
             {isPreviewActive && hasMultipleImages && (
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-20">
                 {images.map((_, idx) => (
@@ -129,7 +132,6 @@ export function GameCard({
             {formatCategory(game.category)}
           </span>
 
-          {/* Subcategory & Tags on hover at the top */}
           <div className="flex flex-wrap gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {game.subcategory && (
               <span className="text-[10px] px-2 py-0.5 bg-indigo-500/50 backdrop-blur-md border border-white/10 text-white uppercase font-bold tracking-wider shadow-sm">
